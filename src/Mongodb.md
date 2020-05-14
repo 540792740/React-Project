@@ -24,7 +24,7 @@ MongoDB
 
     d> clear -> cls
 
-    e> find()
+    e> find() 
         db.employees.find().pretty()    -> Show all detail
         db.employees.find({"EmpNo":"2"}).pretty()   -> find information
         db.employees.find({"Age":{$lt:"30}})
