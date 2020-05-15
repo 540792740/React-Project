@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import '../asserts/css/index.css'
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +15,9 @@ class Home extends Component {
             <div>
                 <h3>{this.state.msg}</h3>
                 <p title={this.state.title}>{this.state.name}</p>
-                <p>{this.state.age}</p>
+                <div className="red">Red Div</div>
+                <label htmlFor="name">Name</label>
+                <input id='name' type="text"/>
             </div>
         );
     }
