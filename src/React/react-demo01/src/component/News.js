@@ -1,21 +1,18 @@
 import React, {Component} from 'react';
+import logo from "../asserts/images/1.jpg"
 
 class News extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            userInfo:'Cris'
+            msg:'News'
         }
     }
     render() {
         return (
             <div>
-                <h3>{this.state.userInfo}</h3>
-                <ul>
-                    <li>List1</li>
-                    <li>List2</li>
-                    <li>List3</li>
-                </ul>
+                <h3>{this.state.msg}</h3>
+                <img src={logo}/>
             </div>
         );
     }
