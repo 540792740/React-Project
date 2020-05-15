@@ -7,17 +7,22 @@ class Home extends Component {
             name:'Peter',
             age:30,
             msg:'Home Component',
-            title:'A title'
+            title:'A title',
+            style:{
+                color:'blue',
+                fontSize:'40px'
+            }
         }
     }
     render() {
         return (
             <div>
-                <h3>{this.state.msg}</h3>
+                <h3 style={{"color":'red'}}>{this.state.msg}</h3>
                 <p title={this.state.title}>{this.state.name}</p>
                 <div className="red">Red Div</div>
                 <label htmlFor="name">Name</label>
                 <input id='name' type="text"/>
+                <div style={this.state.style}>This is a blue style font</div>
             </div>
         );
     }
