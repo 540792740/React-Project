@@ -5,7 +5,9 @@ class News extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            msg:'News'
+            msg:'News',
+            list:['1111', '2222', '3333'],
+            list2:[<h2>This is a h2 tag.</h2>]
         }
     }
     render() {
