@@ -14,15 +14,25 @@ class Home extends Component {
             }
         }
     }
+
+    run(){
+        alert("Here is a run function")
+    }
+
     render() {
         return (
             <div>
-                <h3 style={{"color":'red'}}>{this.state.msg}</h3>
-                <p title={this.state.title}>{this.state.name}</p>
-                <div className="red">Red Div</div>
-                <label htmlFor="name">Name</label>
-                <input id='name' type="text"/>
-                <div style={this.state.style}>This is a blue style font</div>
+                {/*Class 3*/}
+                {/*<h3 style={{"color":'red'}}>{this.state.msg}</h3>*/}
+                {/*<p title={this.state.title}>{this.state.name}</p>*/}
+                {/*<div className="red">Red Div</div>*/}
+                {/*<label htmlFor="name">Name</label>*/}
+                {/*<input id='name' type="text"/>*/}
+                {/*<div style={this.state.style}>This is a blue style font</div>*/}
+
+                {/*Class 4*/}
+                <button onClick={this.run}>Run</button>
+
             </div>
         );
     }

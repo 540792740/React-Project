@@ -24,19 +24,22 @@ class News extends Component {
 
         return (
             <div className='news'>
-                <h3>{this.state.msg}</h3>
-                <img src={logo}/>
-                <img src="https://dss1.bdstatic.com/6OF1bjeh1BF3odCf/it/u=1790140221,4180337232&fm=173&app=49&f=JPEG?w=218&h=146&s=09F8ED175E236401164B51640300E068"/> <hr/>
-                {this.state.list2}
-                {listResult}
-                <hr/>
-                <ul>
-                    {
-                        this.state.list3.map(function(value,key){
-                            return <li key={key}>{value.title}</li>
-                        })
-                    }
-                </ul>
+                {/*Class 3*/}
+                {/*<h3>{this.state.msg}</h3>*/}
+                {/*<img src={logo}/>*/}
+                {/*<img src="https://dss1.bdstatic.com/6OF1bjeh1BF3odCf/it/u=1790140221,4180337232&fm=173&app=49&f=JPEG?w=218&h=146&s=09F8ED175E236401164B51640300E068"/> <hr/>*/}
+                {/*{this.state.list2}*/}
+                {/*{listResult}*/}
+                {/*<hr/>*/}
+                {/*<ul>*/}
+                {/*    {*/}
+                {/*        this.state.list3.map(function(value,key){*/}
+                {/*            return <li key={key}>{value.title}</li>*/}
+                {/*        })*/}
+                {/*    }*/}
+                {/*</ul>*/}
+
+
             </div>
         );
     }
