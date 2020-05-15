@@ -13,10 +13,20 @@ class Home extends Component {
                 fontSize:'40px'
             }
         }
+        //Type 2
+        this.getData2 = this.getData2.bind(this);
     }
 
     run(){
         alert("Here is a run function")
+    }
+
+    getData(){
+        alert(this.state.msg)
+    }
+
+    getData2(){
+        alert(this.state.msg)
     }
 
     render() {
@@ -32,6 +42,9 @@ class Home extends Component {
 
                 {/*Class 4*/}
                 <button onClick={this.run}>Run</button>
+                <button onClick={this.getData.bind(this)}>Type1: getData</button>
+                <button onClick={this.getData2}>Type2: getData</button>
+
 
             </div>
         );
