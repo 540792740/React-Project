@@ -1,43 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-function HocComponent(WrappendComponent) {
+const HocComponentTest =  function WrappedComponent() {
     return class extends Component {
         constructor(props) {
             super(props);
             this.state = {
-                title:'hoc-componnet',
+                title:'hoc-componet',
                 name:'My HOC'
             }
         }
         render() {
-            const newProps ={...this.state}
-            return (
-                <div>
-                    {...this.newProps}
-                </div>
-            );
+            const newProps = {...this.state}
+            return <WrappedComponent {...this.props} {...this.newProps}/>
         }
     };
 }
 
-export default HocComponent;
-
-class HocComponent extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            title:'hoc-componnet',
-            name:'My HOC'
-        }
-    }
-    render() {
-        const newProps ={...this.state}
-        return (
-            <div>
-                {...this.newProps}
-            </div>
-        );
-    }
-}
-
-export default HocComponent;
+export default HocComponentTest;

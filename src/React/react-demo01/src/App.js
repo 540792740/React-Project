@@ -3,6 +3,7 @@ import logo from './asserts/images/logo.svg';
 import './App.css';
 import Home from "./component/Home";
 import News from "./component/News";
+import HocComponent from "./component/HocComponent";
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
         <h3>Hello World</h3>
         <Home></Home>
         <News></News>
+        <hr/>
+        <HocComponent/>
     </div>
   );
 }

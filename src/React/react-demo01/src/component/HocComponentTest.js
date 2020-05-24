@@ -6,10 +6,10 @@ class HocComponentTest extends Component {
         console.log('props', this.props)
         return (
             <div>
-                {this.props.title} -  {this.props.name}
+                {this.props.title} - {this.props.name}
             </div>
         );
     }
 }
 
-export default HocComponentTest(HocComponent);
+export default HocComponent(HocComponentTest);
