@@ -3,7 +3,9 @@ import logo from './asserts/images/logo.svg';
 import './App.css';
 import Home from "./component/Home";
 import News from "./component/News";
-import Page1 from './component/hocpage1';
+import Page1 from './component/Hoc/hocpage1';
+import Page2 from "./component/Hoc/hocpage2";
+import ReverseInput from "./component/Hoc/prototypeReverseHoc";
 
 function App() {
   return (
@@ -13,6 +15,9 @@ function App() {
         <News></News>
         <hr/>
         <Page1/>
+        <Page2/><hr/>
+        <ReverseInput/>
+
     </div>
   );
 }
