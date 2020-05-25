@@ -4,7 +4,7 @@ const withStorage = WrappedComponent => {
     return class extends Component{
         componentWillMount() {
             let data = "这是hoc的data"
-            this.setState({ data })
+            this.setState({ data : "Data State"})
         }
         _renderContent = () =>{
             return <div>
@@ -12,7 +12,9 @@ const withStorage = WrappedComponent => {
             </div>
         }
         render() {
-            return <WrappedComponent _alert={this._alert}  _renderContent={this._renderContent} data={this.state.data} {...this.props}/>
+            return <WrappedComponent _renderContent={this._renderContent}
+                                     data={this.state.data}
+                                     {...this.props}/>
         }
     }
 }
