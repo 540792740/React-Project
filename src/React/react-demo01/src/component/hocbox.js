@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 
 const withStorage = WrappedComponent => {
     return class extends Component{
-        componentWillMount() {
-            let data = "这是hoc的data"
-            this.setState({ data : "Data State"})
+        constructor(props) {
+            super(props);
+            this.state = {
+                data : "Data State"
+            }
         }
         _renderContent = () =>{
             return <div>
