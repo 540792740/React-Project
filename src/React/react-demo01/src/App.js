@@ -3,7 +3,7 @@ import logo from './asserts/images/logo.svg';
 import './App.css';
 import Home from "./component/Home";
 import News from "./component/News";
-import HocComponent from "./component/HocComponent";
+import HocComponentTest from "./component/HocComponent";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Home></Home>
         <News></News>
         <hr/>
-        <HocComponent/>
+        <HocComponentTest/>
     </div>
   );
 }
