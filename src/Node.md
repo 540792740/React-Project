@@ -43,9 +43,16 @@ run server in terminal: `supervisor app.js`
    
     3. fs.writeFile('html/log.log', 'Hello ~ \n', (error) =>{})
     
-    4. 
+    4. fs.appendFile(file, data, callback)
     
-    5.
+    5. fs.readFile(path, 'utf-8', callback)
     
     6.
+    
+    7.
+    
+    8.
+    
+    9.
+    
         
