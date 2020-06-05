@@ -9,7 +9,7 @@
         res.writeHead();
         res.write();
         res.end();    
-}).listen(8888)
+    }).listen(8888)
 ```
 
 
@@ -18,3 +18,19 @@ add a listener
 `npm -g install supervisor`
 
 run server in terminal: `supervisor app.js`
+
+####3. Install special version 
+```
+    npm info jquery
+    npm install jquery@1.8.0
+    npm uninstall jquery
+```
+
+####4. package.json:
+    find all module if there is a package.json 
+    `npm init -s`   -> generate 
+    `npm intall`    -> install all module in package.json
+
+####5. nd5-node: encrypt
+    `npm install` cannot install nd5-node automatically
+    `npm install md5-node -s`
