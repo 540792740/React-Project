@@ -34,3 +34,18 @@ run server in terminal: `supervisor app.js`
 ####5. nd5-node: encrypt
     `npm install` cannot install nd5-node automatically
     `npm install md5-node -s`
+    
+####6. fs Module    
+    1.  Check file or dic
+        state.isFile()
+        state.ifDirectory()
+    2. fs.mkdir("MkdirTest", (error)=>{})
+   
+    3. fs.writeFile('html/log.log', 'Hello ~ \n', (error) =>{})
+    
+    4. 
+    
+    5.
+    
+    6.
+        
