@@ -7,4 +7,3 @@
 #### Image
 *  `import  logo from './image/a.jpg'` <br>
     `<img src={logo}/>`
-     

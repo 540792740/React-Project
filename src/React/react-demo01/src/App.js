@@ -3,7 +3,6 @@ import logo from './asserts/images/logo.svg';
 import './App.css';
 import Home from "./component/Home";
 import News from "./component/News";
-import Page1 from './component/Hoc/hocpage1';
 import Page2 from "./component/Hoc/hocpage2";
 import ReverseInput from "./component/Hoc/prototypeReverseHoc";
 
@@ -14,7 +13,6 @@ function App() {
         <Home></Home>
         <News></News>
         <hr/>
-        <Page1/>
         <Page2/><hr/>
         <ReverseInput/>
 

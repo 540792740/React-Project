@@ -19,6 +19,9 @@ const withStorage = WrappedComponent => {
                 value
             })
         }
+        _alert = () =>{
+            alert("Hey, You Click The Button")
+        }
 
         render() {
             return super.render();

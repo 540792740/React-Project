@@ -5,13 +5,13 @@ class ReverseInput extends Component{
         super(props);
         this.state = {value:''}
     }
-
     render(){
         const { value } = this.state;
         return (
             <div>
                 <input onChange={this.valueChange} value={value}/>
-                <button onClick={this.toSubmit}>sSubmit</button>
+                <button onClick={this.toSubmit}>Submit</button> <br/>
+                <button onClick={this._alert}>Alert</button>
             </div>
         )
     }
