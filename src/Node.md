@@ -40,20 +40,22 @@ run server in terminal: `supervisor app.js`
         state.isFile()
         state.ifDirectory()
     2. fs.mkdir("MkdirTest", (error)=>{})
-   
     3. fs.writeFile('html/log.log', 'Hello ~ \n', (error) =>{})
-    
     4. fs.appendFile(file, data, callback)
-    
     5. fs.readFile(path, 'utf-8', callback)
-    
     6. fs.readdir('html', (error, files) =>{}
-    
-    7.fs.rename('html/log.log', 'html/newLog.log', (error) =>{})
+    7. fs.rename('html/log.log', 'html/newLog.log', (error) =>{})
+    8. fs.rmdir  delete dir
+    9. fs.unlink delete file
+    10. readStream = fs.createReadStream:
+            readStream.on('data')
+            readStream.on('end')
+            readStream.on('error')
+    11. writeStream = fs.createWriteStream('../html/output.txt');
+            writeStream.on('finish',function(){})
+            writeStream.on('error',function(){})
+    12.
 
     
-    8.
-    
-    9.
     
         
