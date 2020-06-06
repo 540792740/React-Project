@@ -47,9 +47,10 @@ run server in terminal: `supervisor app.js`
     
     5. fs.readFile(path, 'utf-8', callback)
     
-    6.
+    6. fs.readdir('html', (error, files) =>{}
     
-    7.
+    7.fs.rename('html/log.log', 'html/newLog.log', (error) =>{})
+
     
     8.
     
