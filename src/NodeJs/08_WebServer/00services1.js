@@ -1,10 +1,27 @@
 var http = require('http');
 var url = require('url');
-http.createServer(function (req, res) {
+var fs = require('fs');
 
-    res.writeHead(200,{"Content-Type":"text/html;charset=UTF-8"});
-    res.write("test  <br>")
-    res.end("哈哈哈哈，我买了一个iPhone" + (1+2+3) + "s");
+http.createServer(function (req, res) {
+    var pathName = req.url;
+
+    // default page
+    if (pathName === '/'){
+        pathName = '/index.html'
+    }
+
+    if(pathName !== '/favicon.ico'){    //filter favicon.ico
+        console.log(pathName);
+
+        fs.readFile('static/' + pathName, function (err, data) {
+            if(err){console.log("404 Not Found");}
+            else{
+                res.writeHead(200,{"Content-Type":"text/html;charset=UTF-8"});
+                res.write(data);
+                res.end()
+            }
+        })
+    }
 }).listen(8888);
 
 console.log('Server running at http://127.0.0.1:8888/');
