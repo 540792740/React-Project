@@ -36,6 +36,7 @@ run server in terminal: `supervisor app.js`
     `npm install md5-node -s`
     
 ####6. fs Module    
+```
     1.  Check file or dic
         state.isFile()
         state.ifDirectory()
@@ -54,7 +55,10 @@ run server in terminal: `supervisor app.js`
     11. writeStream = fs.createWriteStream('../html/output.txt');
             writeStream.on('finish',function(){})
             writeStream.on('error',function(){})
-    12.
+    12. var readerStream = fs.createReadStream('../html/input.txt');
+        var writerStream = fs.createWriteStream('../html/output_pip.txt');
+        readerStream.(writerStream)
+```
 
     
     
