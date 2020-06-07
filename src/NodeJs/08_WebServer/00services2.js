@@ -4,8 +4,10 @@ var fs = require('fs');
 var path = require('path');
 var mimeModel = require('./model/getminme.js');
 
+
+
 http.createServer(function (req, res) {
-    var pathName = req.url;
+    var pathName = url.parse(req.url).pathname;
 
     // default page
     if (pathName === '/'){
