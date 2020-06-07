@@ -1,4 +1,4 @@
-exports.getNime = function (estName) {
+exports.getMime = function (estName) {
     switch (estName) {
         case '.html':
             return 'text/html';
