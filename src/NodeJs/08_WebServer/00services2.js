@@ -2,6 +2,8 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 
+var path = require('path');
+
 http.createServer(function (req, res) {
     var pathName = req.url;
 
@@ -9,12 +11,20 @@ http.createServer(function (req, res) {
     if (pathName === '/'){
         pathName = '/index.html'
     }
- 
+
+    // Get file ext name
+    var extname = path.extname(pathName)
     if(pathName !== '/favicon.ico'){    //filter favicon.ico
-        console.log(pathName);
 
         fs.readFile('static/' + pathName, function (err, data) {
-            if(err){console.log("404 Not Found");}
+            if(err){
+                console.log("404 Not Found");
+                fs.readFile('static/404.html', function (err,data404) {
+                    res.writeHead(404,{"Content-Type":"text/html;charset=UTF-8"});
+                    res.write(data404);
+                    res.end();
+                })
+            }
             else{
                 res.writeHead(200,{"Content-Type":"text/html;charset=UTF-8"});
                 res.write(data);
