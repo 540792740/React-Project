@@ -62,7 +62,13 @@ run server in terminal: `supervisor app.js`
 
 ####7. web server
 ```
-    1. http.createServer(function (req, res) {}).listen(8001)
+    1. http.createServer(function (req, res) {
+            var pathName = url.parse(req.url).pathname;
+            if (pathName === '/'){}
+            if(pathName !== '/favicon.ico'){}
+            
+
+        }).listen(8001)
 
 ```
     
