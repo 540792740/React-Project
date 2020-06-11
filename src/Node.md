@@ -60,6 +60,11 @@ run server in terminal: `supervisor app.js`
         readerStream.(writerStream)
 ```
 
+####7. web server
+```
+    1. http.createServer(function (req, res) {}).listen(8001)
+
+```
     
     
         

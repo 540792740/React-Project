@@ -29,7 +29,7 @@ http.createServer(function (req, res) {
                 })
             }
             else{
-                var mime = mimeModel.getMime(extname);
+                var mime = mimeModel.getMine(fs, extname);
                 res.writeHead(200,{"Content-Type":"" + mime + ";charset=UTF-8"});
                 res.write(data);
                 res.end()
