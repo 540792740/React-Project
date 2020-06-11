@@ -2,9 +2,10 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 var path = require('path');
-var mimeModel = require('./model/getminme.js');
+var mimeModel = require('./model/getminmefromfile');
 
-
+console.log()
+mimeModel.getMine(fs,'.css')
 
 http.createServer(function (req, res) {
     var pathName = url.parse(req.url).pathname;

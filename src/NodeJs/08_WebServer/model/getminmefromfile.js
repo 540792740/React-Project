@@ -7,5 +7,9 @@ exports.getMine = function (fs, extname) {
             console.log("mime.json does not exist")
             return false;
         }
+        var Mime = JSON.parse(data.toString())
+        console.log(Mime[extname]);
+        return Mime[extname] || 'text/html';
+
     })
 }
