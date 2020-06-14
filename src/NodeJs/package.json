@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "02_HttpModule.js",
   "dependencies": {
+    "ejs": "^3.1.3",
     "md5-node": "^1.0.1",
     "silly-datetime": "^0.1.2"
   },
