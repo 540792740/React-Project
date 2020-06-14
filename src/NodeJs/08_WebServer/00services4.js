@@ -2,10 +2,8 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 var path = require('path');
-var mimeModel = require('./model/getminmefromfile');
+var mimeModel = require('./model/05_getminmefromfile');
 
-console.log()
-console.log(mimeModel.getMine(fs, '.css'));
 
 http.createServer(function (req, res) {
     var pathName = url.parse(req.url).pathname;
@@ -29,10 +27,11 @@ http.createServer(function (req, res) {
                 })
             }
             else{
-                var mime = mimeModel.getMine(fs, extname);
-                res.writeHead(200,{"Content-Type":"" + mime + ";charset=UTF-8"});
-                res.write(data);
-                res.end()
+                var mime = mimeModel.getMine(fs, extname, function (mime) {
+                    res.writeHead(200,{"Content-Type":"" + mime + ";charset=UTF-8"});
+                    res.write(data);
+                    res.end()
+                });
             }
         })
     }
