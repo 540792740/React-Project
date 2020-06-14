@@ -18,3 +18,5 @@ EventEmitter.on('to_parent', function(data){
     EventEmitter.emit('to_Mime','Data In Mime');
 
 });
+
+// Get Async data
