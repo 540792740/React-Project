@@ -2,14 +2,16 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 var router = require('./Router')
+var ejs = require('ejs');
 
 http.createServer(function (req, res) {
-    router.statics(req, res, 'static')
-
+    res.writeHead(200, {"Content-Type": "rext/html; charset='utf-8'"});
     var pathname = url.parse(req.url).pathname;
     if(pathname === '/login'){
-        res.end('login');
-    }else if(pathname === '/register'){res.end('order')}
+        ejs.renderFile('./Views/login.ejs', {}, function (err, data) {
+            res.end(data);
+        })
+    }
     else{
         res.end('index')
     }
