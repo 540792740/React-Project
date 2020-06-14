@@ -72,9 +72,18 @@ run server in terminal: `supervisor app.js`
 
 ```
 
-#### 8. Event
+#### 8. Async Fetch data
 ```
-    1. 
+    1. Callback function
+        function getMime(callback) {callback(data)}
+        getMime(function (data) {console.log(data.toString())});
+
+    2. Event EventEmitter
+    var events = require('events');
+    var EventEmitter = new events.EventEmitter();
+    EventEmitter.on('to_parent', function(data){})
+    EventEmitter.emit('to_parent','Data InParent');
+
 
 ```    
     
