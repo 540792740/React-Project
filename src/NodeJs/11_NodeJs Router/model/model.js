@@ -47,3 +47,5 @@ var app = {
 //
 // app.login('req', 'res');
 // app["login"]('req');
+
+module.exports = app;
