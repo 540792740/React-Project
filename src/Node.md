@@ -83,8 +83,8 @@ run server in terminal: `supervisor app.js`
     var EventEmitter = new events.EventEmitter();
     EventEmitter.on('to_parent', function(data){})
     EventEmitter.emit('to_parent','Data InParent');
-
-
 ```    
+
+
     
         
