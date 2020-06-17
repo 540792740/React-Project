@@ -4,6 +4,14 @@ var ejs = require('ejs');
 
 http.createServer(app).listen(8000)
 
+app.get('/', function (req, res) {
+    var msg = "Data from Database";
+
+    ejs.renderFile('./Views/index.ejs', {msg:msg}, function (err, data) {
+        res.send(data);
+    })
+})
+
 app.get('/login', function (req, res) {
     console.log('login');
     ejs.renderFile('./Views/form.ejs', {}, function (err, data) {
