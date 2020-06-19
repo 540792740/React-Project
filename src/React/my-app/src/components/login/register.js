@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import loginImg from '../../login.svg'
 
-class Register extends Component {
+export class Register extends Component {
     constructor(props) {
         super(props);
     }
@@ -41,4 +41,3 @@ class Register extends Component {
     }
 }
 
-export default Register;
