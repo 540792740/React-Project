@@ -7,3 +7,9 @@
 #### Image
 *  `import  logo from './image/a.jpg'` <br>
     `<img src={logo}/>`
+
+#### Start:
+```
+    1. npx create-react-app my-app
+
+```
