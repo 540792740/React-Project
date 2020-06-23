@@ -45,7 +45,24 @@ class ReactForm extends Component {
                         })}
                     </select> <br/>
 
+                    {/*Hobby*/}
+                    Hobby: {this.state.hobby.map((value, key)=>{
+                        return(
+                            <span key={key}>
+                                <input type="checkbox" checked={value.checked}
+                                       onChange={() => this.handleHobby(key)}
 
+                                />{value.title}
+                            </span>
+                        )})}
+                    <br/>
+
+                    {/* Additional Information  */}
+                    Additionally: <br/>
+                    <textarea value={this.state.info}
+                              rows="10"
+                              onChange={(e) => this.handleInfo(e)}
+                    ></textarea>
 
                     <br/>
                     <input type="submit" value='Submit'/>
@@ -57,6 +74,11 @@ class ReactForm extends Component {
     handleSubmit = (e)=> {
         e.preventDefault()
         console.log(this.state.name)
+        console.log(this.state.sex)
+        console.log(this.state.cities)
+        console.log(this.state.hobby)
+        console.log(this.state.info)
+        console.log(this.state)
     }
 
     submitName= (e) =>{
@@ -74,6 +96,22 @@ class ReactForm extends Component {
     handleCity = (event) => {
         this.setState({
             city:event.target.value
+        })
+    }
+
+    handleHobby(key){
+        var hobby = this.state.hobby;
+
+        hobby[key].checked = !hobby[key].checked;
+
+        this.setState({
+            hobby: hobby
+        })
+    }
+
+    handleInfo(e) {
+        this.setState({
+            info:e.target.value
         })
     }
 }
