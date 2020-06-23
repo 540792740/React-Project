@@ -25,9 +25,9 @@ class App extends Component {
                        placeholder='Add Item'/>
                 <button className='btn btn-add'
                         onClick={() => this.addItems()}>+</button>
-                <ul>
+                <ul >
                     {this.state.list.map(item =>{return (
-                        <li className='item' key={item.id}>
+                        <li  className='item' key={item.id}>
                             {item.value}
                             <button className="btn btn-delete"
                                     onClick={() => this.deleteItem(item.id)}>

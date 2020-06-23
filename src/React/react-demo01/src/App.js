@@ -5,6 +5,7 @@ import Home from "./component/Home";
 import News from "./component/News";
 import Page2 from "./component/Hoc/hocpage2";
 import ReverseInput from "./component/Hoc/prototypeReverseHoc";
+import ReactForm from "./component/ReactForm";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <hr/>
         <Page2/><hr/>
         <ReverseInput/>
+        <hr/>
+        <ReactForm/>
 
     </div>
   );

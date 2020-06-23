@@ -3,6 +3,7 @@ body{
 
 }
 .body{
+
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
 }
@@ -45,9 +46,9 @@ body{
     border: transparent;
     font-size: 15px;
 
-
 }
 
 .item{
-  text-align: left;
+  text-align: center;
+  width: 200px;
 }
