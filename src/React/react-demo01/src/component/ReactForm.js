@@ -6,6 +6,7 @@ class ReactForm extends Component {
         this.state = {
             name:'',
             sex:'0',
+            name2:'',
             city:'',
             cities:['Beijing', 'Shanghai', 'Shenzhen'],
             hobby:[
@@ -82,9 +83,18 @@ class ReactForm extends Component {
     }
 
     submitName= (e) =>{
-            this.setState({
-                name: e.target.value
-            })
+        var a = e.target.value;
+        var b  = a.split('')
+        console.log(b[b.length - 1])
+        var newB = this.state.name2;
+        newB += b[b.length - 1]
+
+        this.setState({
+            name: e.target.value,
+            name2:newB
+        })
+        console.log(newB)
+        console.log(a)
     }
 
     handleSex = (event) =>{
