@@ -10,3 +10,10 @@
     padding: 16px;
     text-align: center;
 }
+
+.lightblue{
+    color: lightblue;
+}
+.bold{
+    font-weight: bold;
+}

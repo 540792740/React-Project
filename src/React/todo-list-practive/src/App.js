@@ -17,14 +17,19 @@ class App extends Component {
         }
     }
     render() {
-        const style ={
+        const style = {
             backgroundColor:'#f86666',
             color:'#fff',
             borderRadius:'20px',
             border: '1px solid black',
             padding:'8px',
-            cursor:'pointer'
+            cursor:'pointer',
+            ':hover' : {
+                backgroundColor:'pink',
+                color: '#66d266'
+            }
         }
+
         let persons = null;
         if(this.state.showPerson) {
             persons = (
@@ -45,16 +50,31 @@ class App extends Component {
         }
         else{
             persons= <div></div>
+            style.backgroundColor = 'blue';
+            style[':hover'] = {
+                backgroundColor:'rgba(156,78,205,0.84)'
+            }
+        }
+        const classes = []
+        if(this.state.persons.length <= 2){
+            classes.push('lightblue')
+        }
+        if(this.state.persons.length <= 1){
+            classes.push('lightblue', 'bold')
         }
 
         return (
-            <div className='App'>
-                <p>React</p>
-                <button style={style}
-                        onClick={() => this.toggleHandler()}
-                >Hide</button>
-                {persons}
-            </div>
+            // <StyleRoot>
+                <div className='App'>
+                    <p>React</p>
+                    <p className={classes.join(' ')}>I'm Working Now</p>
+                    <button style={style}
+                            onClick={() => this.toggleHandler()}
+                    >Hide</button>
+                    {persons}
+                </div>
+            // </StyleRoot>
+
         );
     }
     switchNameHandle(id) {
@@ -86,4 +106,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Radium(App);
