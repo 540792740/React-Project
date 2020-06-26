@@ -19,7 +19,7 @@ class App extends Component {
         return (
             <div className='App'>
                 <p>React</p>
-                <button>Switch</button>
+                <button onClick={this.switchNameHandle.bind(this, 'max')}>Switch</button>
                 <Person click={()=>this.switchNameHandle()}
                         personItem={this.state.persons[0]}
                 >{"Hello world, this is children prop"}</Person>
@@ -27,7 +27,7 @@ class App extends Component {
         );
     }
 
-    switchNameHandle() {
+    switchNameHandle(data) {
         this.setState({
             persons:[
                 {id:'1', name:'Boss', age:12},
