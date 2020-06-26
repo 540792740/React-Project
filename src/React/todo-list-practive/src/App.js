@@ -55,7 +55,7 @@ class App extends Component {
         );
     }
     switchNameHandle(id) {
-        var persons = this.state.persons
+        var persons = [...this.state.persons]
         persons = persons.filter((item)=>item.id !== id)
         this.setState({
             persons:persons

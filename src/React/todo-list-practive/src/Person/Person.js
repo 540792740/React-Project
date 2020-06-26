@@ -9,8 +9,8 @@ const Person = (prop) => {
             <input type="text"
                    value={prop.personItem.name}
                    onChange={prop.change}
-
             />
+            <p>{prop.children}</p>
         </div>
     )
 }
