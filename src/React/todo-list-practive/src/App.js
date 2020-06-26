@@ -16,24 +16,56 @@ class App extends Component {
 
 
     render() {
+
+        const style ={
+            backgroundColor:'#f86666',
+            color:'#fff',
+            borderRadius:'20px',
+            border: '1px solid black'
+        }
+
         return (
             <div className='App'>
                 <p>React</p>
-                <button onClick={this.switchNameHandle.bind(this, 'max')}>Switch</button>
-                <Person click={()=>this.switchNameHandle()}
-                        personItem={this.state.persons[0]}
-                >{"Hello world, this is children prop"}</Person>
+                <button style={style}
+                        onClick={this.switchNameHandle.bind(this, 'max')}
+                >Switch</button>
+                {this.state.persons.map((value, key)=>{
+                    return (
+                        <Person key={key}
+                                click={()=>this.switchNameHandle()}
+                                personItem={value}
+                                change={(event)=>{
+                                    return this.nameChangeHandler(event, value.id)
+                                }}
+                        >{"Hello world, this is children prop"}</Person>
+                    )
+                })}
+
             </div>
         );
     }
 
-    switchNameHandle(data) {
+    switchNameHandle() {
         this.setState({
             persons:[
-                {id:'1', name:'Boss', age:12},
-                {id:'2', name:'Cos', age:22},
-                {id:'3', name:'Moss', age:32},
+                {id:'1', name:'Hob', age:12},
+                {id:'2', name:'Cris', age:22},
+                {id:'3', name:'Jack', age:32},
             ]
+    })
+    }
+
+    nameChangeHandler(event, id) {
+        var persons = this.state.persons;
+        var name = event.target.value
+        this.state.persons.map((value)=>{
+            if(value.id === id){
+                value.name = name
+            }
+        })
+        this.setState({
+            persons:persons
         })
     }
 }
