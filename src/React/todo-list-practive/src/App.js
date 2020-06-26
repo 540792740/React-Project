@@ -10,13 +10,11 @@ class App extends Component {
                 {id:'1', name:'Peter', age:12},
                 {id:'2', name:'Cris', age:22},
                 {id:'3', name:'Jack', age:32},
-            ]
+            ],
+            otherState:'Some other value',
         }
     }
-
-
     render() {
-
         const style ={
             backgroundColor:'#f86666',
             color:'#fff',
@@ -28,7 +26,7 @@ class App extends Component {
             <div className='App'>
                 <p>React</p>
                 <button style={style}
-                        onClick={this.switchNameHandle.bind(this, 'max')}
+                        onClick={() => this.toggleHandler()}
                 >Switch</button>
                 {this.state.persons.map((value, key)=>{
                     return (
@@ -41,7 +39,6 @@ class App extends Component {
                         >{"Hello world, this is children prop"}</Person>
                     )
                 })}
-
             </div>
         );
     }
@@ -67,6 +64,10 @@ class App extends Component {
         this.setState({
             persons:persons
         })
+    }
+
+    toggleHandler() {
+        return undefined;
     }
 }
 
