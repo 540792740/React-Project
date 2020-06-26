@@ -2,8 +2,8 @@ import React from "react";
 
 const Person = (prop) => {
     return(
-        <div className='Person'>
-            <p onClick={prop.click}>
+        <div className='Person' onClick={prop.click}>
+            <p >
                 I am {prop.personItem.name}, I am {prop.personItem.age} years old
             </p>
             <input type="text"

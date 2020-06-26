@@ -12,6 +12,7 @@ class App extends Component {
                 {id:'3', name:'Jack', age:32},
             ],
             otherState:'Some other value',
+            showPerson:true
         }
     }
     render() {
@@ -21,36 +22,46 @@ class App extends Component {
             borderRadius:'20px',
             border: '1px solid black'
         }
+        let persons = null;
+        if(this.state.showPerson) {
+            persons = (
+                <div>
+                    {this.state.persons.map((value, key) => {
+                        return (
+                            <Person key={key}
+                                    click={() => this.switchNameHandle(value.id)}
+                                    personItem={value}
+                                    change={(event) => {
+                                        return this.nameChangeHandler(event, value.id)
+                                    }}
+                            >{"Hello world, this is children prop"}</Person>
+                        )
+                    })}
+                </div>
+            )
+        }
+        else{
+            persons= <div></div>
+        }
 
         return (
             <div className='App'>
                 <p>React</p>
                 <button style={style}
                         onClick={() => this.toggleHandler()}
-                >Switch</button>
-                {this.state.persons.map((value, key)=>{
-                    return (
-                        <Person key={key}
-                                click={()=>this.switchNameHandle()}
-                                personItem={value}
-                                change={(event)=>{
-                                    return this.nameChangeHandler(event, value.id)
-                                }}
-                        >{"Hello world, this is children prop"}</Person>
-                    )
-                })}
+                >Hide</button>
+                {persons}
             </div>
         );
     }
-
-    switchNameHandle() {
+    switchNameHandle(id) {
+        var persons = this.state.persons
+        console.log(id)
+        persons = persons.splice(parseInt(id),1)
+        console.log(persons)
         this.setState({
-            persons:[
-                {id:'1', name:'Hob', age:12},
-                {id:'2', name:'Cris', age:22},
-                {id:'3', name:'Jack', age:32},
-            ]
-    })
+            persons:persons
+        })
     }
 
     nameChangeHandler(event, id) {
@@ -67,7 +78,10 @@ class App extends Component {
     }
 
     toggleHandler() {
-        return undefined;
+        const showPerson = !this.state.showPerson
+        this.setState({
+            showPerson:showPerson
+        })
     }
 }
 
