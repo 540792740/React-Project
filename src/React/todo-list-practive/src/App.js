@@ -56,9 +56,7 @@ class App extends Component {
     }
     switchNameHandle(id) {
         var persons = this.state.persons
-        console.log(id)
-        persons = persons.splice(parseInt(id),1)
-        console.log(persons)
+        persons = persons.filter((item)=>item.id !== id)
         this.setState({
             persons:persons
         })
