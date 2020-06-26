@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Person from "./Person/Person";
+import Radium, {StyleRoot} from "radium";
 
 class App extends Component {
     constructor(props) {
@@ -20,7 +21,9 @@ class App extends Component {
             backgroundColor:'#f86666',
             color:'#fff',
             borderRadius:'20px',
-            border: '1px solid black'
+            border: '1px solid black',
+            padding:'8px',
+            cursor:'pointer'
         }
         let persons = null;
         if(this.state.showPerson) {
