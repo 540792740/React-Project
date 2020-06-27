@@ -98,7 +98,7 @@ class TodoList extends Component {
 
         }
     }
-
+//
     checkboxChange (key){
         let tempList = this.state.list
 
