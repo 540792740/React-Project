@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../App.css'
 
 class TodoList extends Component {
     constructor(props) {
@@ -49,7 +50,7 @@ class TodoList extends Component {
                                 <li key={key}>
                                     <input type="checkbox"
                                            checked={value.checked}
-                                           onChange={this.checkboxChange.bind(this, key, value.checked)}
+                                           onChange={() => this.checkboxChange(key)}
                                     />
                                     {value.title}
                                     ---- <button onClick={() =>{this.removeData(key)}}>Delete</button>
@@ -91,15 +92,25 @@ class TodoList extends Component {
 
             // Clear input
             e.target.value = ''
+
+            //Save cache
+            localStorage.setItem("todoList", JSON.stringify(tempList));
+
         }
     }
 
-    checkboxChange = (key, checked) =>{
-        var list = [...this.state.list]
-        list[key].ckecked = !checked;
+    checkboxChange (key){
+        let tempList = this.state.list
+
+        tempList[key].checked = !tempList[key].checked;
+        // tempList[key].ckecked = !tempList[key].ckecked;
+
         this.setState({
-            list:list
+            list:tempList
         })
+
+        //Save cache
+        localStorage.setItem("todoList", JSON.stringify(tempList));
     }
     removeData(key){
         var temp = this.state.list;
@@ -107,6 +118,8 @@ class TodoList extends Component {
         this.setState({
             list:temp
         })
+        //Save cache
+        localStorage.setItem("todoList", JSON.stringify(temp));
     }
 
 
