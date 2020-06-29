@@ -15,6 +15,15 @@ class TodoList extends Component {
 
         }
     }
+    // LifeCycle, load page then run function
+    componentDidMount() {
+        // Fetch list
+        var list = JSON.parse(localStorage.getItem('todoList'))
+
+
+    }
+
+
     render() {
         return (
             <div>
