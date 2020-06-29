@@ -38,6 +38,9 @@ const Person = (prop) => {
     {prop.children}
 }
     
+```
 
-
+#### Redux
+```
+    npm install redux react-redux -s
 ```
