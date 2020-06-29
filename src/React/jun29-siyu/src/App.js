@@ -3,34 +3,58 @@ import './App.css';
 import {connect} from "react-redux"
 import {createAdd, createSub} from "./actions/index"
 
-const App = (props) =>{
-    console.log(props)
-        return(
-            <div>
-                Counter: {props.value.counter}
-                <button onClick={props.handleAdd}>Add</button>
-                <button onClick={props.handleSub}>Sub</button>
-            </div>
-        )
-}
-const mapStateToProps = (state) =>{
-    return {value: state}
-}
-
-const mapDispatchToProps = (dispatch) =>{
-    return {
-        handleAdd(){
-                dispatch(createAdd())
-            },
-            handleSub(){
-                dispatch(createSub())
-            }
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            fullName:`${props.firstName} ${props.lastName}`
         }
+    }
+    render() {
+        var fullName = this.state.fullName
+        return (
+            <div>
+                {fullName}
+            </div>
+        );
+    }
 }
 
+export default App;
 
 
-export default connect (mapStateToProps, mapDispatchToProps)( App );
+
+
+
+
+// const App = (props) =>{
+//     console.log(props)
+//         return(
+//             <div>
+//                 Counter: {props.value.counter}
+//                 <button onClick={props.handleAdd}>Add</button>
+//                 <button onClick={props.handleSub}>Sub</button>
+//             </div>
+//         )
+// }
+// const mapStateToProps = (state) =>{
+//     return {value: state}
+// }
+//
+// const mapDispatchToProps = (dispatch) =>{
+//     return {
+//         handleAdd(){
+//                 dispatch(createAdd())
+//             },
+//             handleSub(){
+//                 dispatch(createSub())
+//             }
+//         }
+// }
+//
+//
+//
+// export default connect (mapStateToProps, mapDispatchToProps)( App );
 
 
 
