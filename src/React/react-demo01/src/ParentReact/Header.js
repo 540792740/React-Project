@@ -10,7 +10,10 @@ class Header extends Component {
     render() {
         return (
             <div>
-                Header Component
+                <h2>{this.props.title}</h2>
+                <button onClick={this.props.run }>Run </button>
+                <button onClick={this.props.news.getData}> data </button>
+
             </div>
         );
     }

@@ -51,3 +51,10 @@ const Person = (prop) => {
     Get:    var list = JSON.parse(localStorage.getItem('todoList'))
 ```
 
+#### Pass data from Parent C to Child Component
+```
+     <Header run={this.run} title={this.state.title} news={this}
+        1. title pass the data => this.props.title
+        2. news, pass the whole parent Component => this.props.news.xxx
+```
+

@@ -1,19 +1,24 @@
 import React, {Component} from 'react';
-import './Header'
 import Header from "./Header";
+import News from "./News";
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
             msg: 'This is Home component',
-            title:'Title'
+            title:'Home Component'
         }
     }
     render() {
         return (
             <div>
-                <Header/>
+                {/*<Header title={this.state.title}/>*/}
+                <br/><hr/><br/>
+                This is Home Component
+                <br/><hr/><br/>
+                <News/>
+                This is News Component
             </div>
         );
     }
