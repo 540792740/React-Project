@@ -58,3 +58,8 @@ const Person = (prop) => {
         2. news, pass the whole parent Component => this.props.news.xxx
 ```
 
+#### ref
+```
+
+
+```
