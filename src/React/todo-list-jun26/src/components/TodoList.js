@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import '../App.css'
+import Storage from '../model/storage'
+
 
 class TodoList extends Component {
     constructor(props) {
@@ -18,7 +20,8 @@ class TodoList extends Component {
     // LifeCycle, load page then run function
     componentDidMount() {
         // Fetch list
-        var list = JSON.parse(localStorage.getItem('todoList'))
+        // var list = JSON.parse(localStorage.getItem('todoList'))
+        var list = Storage.get("todoList")
         if(list){
             this.setState({
                 list:list
@@ -107,8 +110,8 @@ class TodoList extends Component {
             e.target.value = ''
 
             //Save cache
-            localStorage.setItem("todoList", JSON.stringify(tempList));
-
+            // localStorage.setItem("todoList", JSON.stringify(tempList));
+            Storage.set('todoList', tempList)
         }
     }
 //
@@ -123,16 +126,19 @@ class TodoList extends Component {
         })
 
         //Save cache
-        localStorage.setItem("todoList", JSON.stringify(tempList));
+        // localStorage.setItem("todoList", JSON.stringify(tempList));
+        Storage.set('todoList', tempList)
     }
     removeData(key){
-        var temp = this.state.list;
-        temp.splice(key, 1);
+        var tempList = this.state.list;
+        tempList.splice(key, 1);
         this.setState({
-            list:temp
+            list:tempList
         })
         //Save cache
-        localStorage.setItem("todoList", JSON.stringify(temp));
+        // localStorage.setItem("todoList", JSON.stringify(temp));
+        Storage.set('todoList', tempList)
+
     }
 
 
