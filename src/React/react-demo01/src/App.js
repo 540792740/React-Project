@@ -8,6 +8,9 @@ import ReactForm from "./component/ReactForm";
 import OneMoreForm from "./component/OneMoreForm";
 import Header from "./ParentReact/Header";
 import Home from "./ParentReact/Home";
+import Ref from "./ParentReact/Ref";
+import Login from "./ParentReact/Login";
+import VideoPlayer from "./ParentReact/VideoPlayer";
 
 function App() {
   return (
@@ -20,7 +23,12 @@ function App() {
         {/*<Page2/><hr/>*/}
         {/*<ReverseInput/>*/}
         {/*<ReactForm/><hr/>*/}
-        <Home/>
+        {/*<Home/>*/}
+        <br/><hr/><br/>
+        <Ref/>
+        <br/><hr/><br/>
+        {/*<Login/>*/}
+        <VideoPlayer/>
     </div>
   );
 }

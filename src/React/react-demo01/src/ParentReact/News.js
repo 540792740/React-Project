@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import Header from "./Header";
+import Footer from "./Footer";
 
 class News extends Component {
     constructor(props) {
         super(props);
+        this.myRef = React.createRef()
         this.state = {
             msg: 'This is New component',
             title:'New Component'
@@ -17,6 +19,12 @@ class News extends Component {
         alert('Data')
     }
 
+    getChildData = (result) =>{
+        alert(result)
+        this.setState({
+            msg:result
+        })
+    }
 
     render() {
         return (
@@ -26,9 +34,19 @@ class News extends Component {
                         news={this}
                 />
                 <br/><hr/><br/>
-                This is Home Component
+                This is News Component --- {this.state.msg}
+                <br/><hr/><br/>
+
+                <button onClick={() => this.getFooter()}>Get Footer Component</button>
+
+                <Footer ref='footer'/>
+
             </div>
         );
+    }
+
+    getFooter() {
+        alert(this.myRef.footer.state.msg)
     }
 }
 
