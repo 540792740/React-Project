@@ -19,7 +19,11 @@ class TodoList extends Component {
     componentDidMount() {
         // Fetch list
         var list = JSON.parse(localStorage.getItem('todoList'))
-
+        if(list){
+            this.setState({
+                list:list
+            })
+        }
 
     }
 

@@ -44,3 +44,10 @@ const Person = (prop) => {
 ```
     npm install redux react-redux -s
 ```
+
+#### Save or Get localhost value
+```
+    Save:   localStorage.setItem("todoList", straightify(tempList))
+    Get:    var list = JSON.parse(localStorage.getItem('todoList'))
+```
+
