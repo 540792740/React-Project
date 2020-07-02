@@ -23,12 +23,12 @@ function App() {
         {/*<Page2/><hr/>*/}
         {/*<ReverseInput/>*/}
         {/*<ReactForm/><hr/>*/}
-        {/*<Home/>*/}
+        <Home/>
         <br/><hr/><br/>
-        <Ref/>
-        <br/><hr/><br/>
+        {/*<Ref/>*/}
+        {/*<br/><hr/><br/>*/}
         {/*<Login/>*/}
-        <VideoPlayer/>
+        {/*<VideoPlayer/>*/}
     </div>
   );
 }

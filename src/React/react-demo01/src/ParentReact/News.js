@@ -39,14 +39,14 @@ class News extends Component {
 
                 <button onClick={() => this.getFooter()}>Get Footer Component</button>
 
-                <Footer ref='footer'/>
+                <Footer ref={this.myRef}/>
 
             </div>
         );
     }
 
     getFooter() {
-        alert(this.myRef.footer.state.msg)
+        alert(this.myRef.current.state.msg)
     }
 }
 
