@@ -51,11 +51,28 @@ const Person = (prop) => {
     Get:    var list = JSON.parse(localStorage.getItem('todoList'))
 ```
 
-#### Pass data from Parent C to Child Component
+#### Transform between Parent C and Child C
 ```
-     <Header run={this.run} title={this.state.title} news={this}
-        1. title pass the data => this.props.title
-        2. news, pass the whole parent Component => this.props.news.xxx
+     a> <Header run={this.run} 
+             title={this.state.title}        
+             news={this} />
+        1. Pass Function: 
+                child: <button onClick={this.props.run}/>
+        2. title pass the data => {this.props.title}
+        3. news, pass the whole parent Component => {this.props.news.xxx}
+     
+     b> Fetch child function and data:
+        parent:
+            <button onClick={() => this.getFooter()}>Get Footer Component</button>
+            <Footer ref={this.myRef}/>
+            getFooter(){ 
+                this.myRef.current.run      => get function
+                alert(this.myRef.current.state.msg)     => get Data
+            }
+        Child: 
+            run = () =>{}
+      
+     
 ```
 
 #### ref
