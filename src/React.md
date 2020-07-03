@@ -71,12 +71,10 @@ const Person = (prop) => {
             }
         Child: 
             run = () =>{}
-      
-     
 ```
 
 #### ref
 ```
-
-
+    this.userNameRef = React.createRef()
+    <input type="text" ref={this.userNameRef} />
 ```
