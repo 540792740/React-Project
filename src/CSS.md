@@ -13,7 +13,17 @@
 
 5. UpperCase Text   <br>
     `text-transform: uppercase;`
+    
 6. font-size: 3rem => 	Relative to font-size of the root element	
 
+7. **box-sizing: border-box;** padding or margin cannot change the size of height and width of the box
+``` 
+    width: 300px;
+    height: 100px;  
+    padding: 50px;
+    border: 1px solid red;
+    box-sizing: border-box;
+```
 
+8.css selector: *{} => select all element
 
