@@ -14,7 +14,10 @@
 5. UpperCase Text   <br>
     `text-transform: uppercase;`
     
-6. font-size: 3rem => 	Relative to font-size of the root element	
+6. font-size: 3rem => 	Relative to font-size of the root element	<br>
+     `container: 100vw: view Width ` <br>
+     `100vh: view height`
+    
 
 7. **box-sizing: border-box;** padding or margin cannot change the size of height and width of the box
 ``` 
@@ -25,5 +28,21 @@
     box-sizing: border-box;
 ```
 
-8.css selector: *{} => select all element
+8.css selector: *{} => select all element <br>
+
+9. overflow:
+```
+    Visible: default
+    hidden: hide overflow data
+    scroll: scroll data
+```
+
+10. Background img should position:fixed;  <br>
+
+11. container:  <br>
+```
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap :7rem;
+    
+```
 
