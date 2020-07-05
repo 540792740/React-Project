@@ -107,7 +107,7 @@ form{
     transition: .4s;
 }
 
-.input-div:before{
+.input-div  :before{
     right: 50%;
 }
 
