@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import AxiosChild from "./AxiosChild";
+import Fetchjsonp from "./Fetchjsonp";
 
 class AxioHome extends Component {
     constructor(props) {
@@ -12,7 +13,8 @@ class AxioHome extends Component {
         return (
             <div>
                 This is Home page of Axios
-                <AxiosChild/>
+                {/*<AxiosChild/>*/}
+                <Fetchjsonp/>
             </div>
         );
     }
