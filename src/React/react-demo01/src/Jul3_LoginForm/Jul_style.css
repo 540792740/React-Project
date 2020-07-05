@@ -18,17 +18,138 @@ body{
 }
 .container{
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
+    grid-gap: 6rem;
+    padding: 0 2rem;
 }
 
 .img{
-    /*position: relative;*/
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
 }
 
 .login-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+
+.img img{
+    width: 500px;
+}
+
+form{
+    width: 250px;
+}
+
+
+.login-content img{
+    height: 100px;
+}
+
+.login-content h2{
+    text-transform: uppercase;
+    margin: 15px 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+
+.btn{
+    width: 80%;
+    height: 40px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    outline:none;
+    border: none;
+    background-image: linear-gradient(to right, #4da075, #6ac69a, #2b8b63);
+    background-size: 200%;
+    transition: 0.4s;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.btn:hover{
+    background-position: right;
+}
+
+.login-content a{
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+    color: #7e878c;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #63a780;
+}
+.login-content div{
+    position: relative;
+    margin: 20px, 0;
+}
+
+.label{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transition: .3s;
+    transform: translateY(-50%);
+    color: #a09c9c;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.focus{
+    top: -10px;
+    font-size: 0.9rem ;
+}
+
+.login-content  .input-div{
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 2rem;
+    margin: 25px, 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
 
 }
+
+.login-content .input{
+    position: absolute;
+    width: 100%;
+    height: 2rem;
+    border: none;
+    background:none;
+    outline: none;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+/*.input:before, .input:after{*/
+/*    position: fixed;*/
+/*    bottom: -2px;*/
+/*    width: 0%;*/
+/*    height: 2px;*/
+/*    background-color: #38d39f;*/
+/*    transition: .4s;*/
+/*}*/
+
+/*.input:before{*/
+/*    right: 50%;*/
+/*}*/
+
+/*.input:after{*/
+/*    left: 50%;*/
+/*}*/
+
+/*.input.focus:before, .input.focus:after{*/
+/*    width: 50%;*/
+/*}*/

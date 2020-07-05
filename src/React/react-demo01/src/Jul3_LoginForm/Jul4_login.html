@@ -11,20 +11,23 @@
 <body>
     <img class="wave" src="./wave.png">
     <div class="container">
-        <img class="img"  src="./bg.svg">
+        <div class="img">
+            <img src="./bg.svg">
+        </div>
         <div class="login-content">
-            <form>
-                <img src="./avatar.svg">
+            <form action="LoginPage.html">
+                <img class="img-avatar" src="./avatar.svg">
                 <h2 class="title">Welcome</h2>
 
-                <label for="username">
-                    <input id="username" type="text">
-                </label>
-
-                <label for="password">
-                    <input id="password" type="password">
-                </label>
-
+                <div class="input-div username">
+                    <label class="label" for="username">Username</label>
+                     <input class="input" id="username" type="text">
+                </div>
+                <br>
+                <div class="input-div password">
+                    <label class="label" for="password">Password</label>
+                    <input class="input" id="password" type="password" >
+                </div>
                 <a href="#">Forgot Password</a>
                 <button class="btn">Login</button>
             </form>
@@ -32,5 +35,31 @@
         </div>
             
     </div>
+
+
+<Script>
+    const inputs = document.querySelectorAll('input')
+
+    function addFocus(){
+        const label = this.parentNode.children[0]
+        label.classList.add("focus");
+        console.log(label)
+    }
+    function deleteFocus(){
+        const label = this.parentNode.children[0]
+        const input = this.parentNode.children[1]
+        if(input.value === ''){
+            label.classList.remove("focus");
+        }
+        console.log(label)
+    }
+
+    inputs.forEach((input)=>{
+        input.addEventListener('focus', addFocus)
+        input.addEventListener('blur', deleteFocus)
+    })
+
+
+</Script>
 </body>
 </html>
