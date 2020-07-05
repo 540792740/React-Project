@@ -37,7 +37,12 @@
     scroll: scroll data
 ```
 
-10. Background img should position:fixed;  <br>
+10. Background:
+```
+    z-index: -1; => Set as Background 
+    Background img should position:fixed;  <br>
+
+```
 
 11. container:  <br>
 ```

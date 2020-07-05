@@ -1,17 +1,23 @@
 *{
-
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 .wave{
     position: fixed;
     left: 0;
-    top: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
 }
 
 .img{
-    position: relative;
+    /*position: relative;*/
+    display: flex;
 }
