@@ -1,0 +1,17 @@
+*{
+
+}
+
+body{
+    overflow: hidden;
+}
+
+.wave{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.img{
+    position: relative;
+}

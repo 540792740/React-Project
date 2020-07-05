@@ -46,3 +46,12 @@
     
 ```
 
+12. btn: <br>
+```
+    1. .btn:hover{
+           background-position: right;
+       }
+
+
+```
+
