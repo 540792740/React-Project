@@ -71,10 +71,24 @@ const Person = (prop) => {
             }
         Child: 
             run = () =>{}
+            i> Header.defaultProps = {}  => default props when no data pass from parent
+            ii> PropTypes:
+                import PropTypes from 'prop-types'
+                Header.propTypes={title: PropTypes.string} 
 ```
 
 #### ref
 ```
     this.userNameRef = React.createRef()
     <input type="text" ref={this.userNameRef} />
+```
+
+#### React fetch API
+```
+    1. axios
+        npm install axios
+        import axios from 'axios
+        
+    2. fetch-jsonp
+
 ```

@@ -13,7 +13,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                {/*<Header title={this.state.title}/>*/}
+                <Header title={this.state.title} num={20}/>
                 <br/><hr/><br/>
                 This is Home Component
                 <br/><hr/><br/>
