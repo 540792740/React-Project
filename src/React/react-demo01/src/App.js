@@ -11,6 +11,7 @@ import Home from "./ParentReact/Home";
 import Ref from "./ParentReact/Ref";
 import Login from "./ParentReact/Login";
 import VideoPlayer from "./ParentReact/VideoPlayer";
+import AxioHome from "./Jul5Axios/AxioHome";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         {/*<br/><hr/><br/>*/}
         {/*<Login/>*/}
         {/*<VideoPlayer/>*/}
+        <AxioHome/>
     </div>
   );
 }

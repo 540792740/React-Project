@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Axios from 'axios'
+import AxiosChild from "./AxiosChild";
 
 class AxioHome extends Component {
     constructor(props) {
@@ -11,8 +11,8 @@ class AxioHome extends Component {
     render() {
         return (
             <div>
-                <Axios/>
                 This is Home page of Axios
+                <AxiosChild/>
             </div>
         );
     }

@@ -88,7 +88,10 @@ const Person = (prop) => {
     1. axios
         npm install axios
         import axios from 'axios
-        
+        must use arrow function in callback response.
     2. fetch-jsonp
+        npm install fetch-jsonp
+        import FetchJsonp from 'fetch-jsonp'
+        
 
 ```
