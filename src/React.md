@@ -1,5 +1,3 @@
-
-
 #### Component:
 * First Character of name should be **Capital**
 
@@ -95,3 +93,5 @@ const Person = (prop) => {
         
 
 ```
+#### LifeCycle:
+    

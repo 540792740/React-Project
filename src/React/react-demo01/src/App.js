@@ -12,6 +12,7 @@ import Ref from "./ParentReact/Ref";
 import Login from "./ParentReact/Login";
 import VideoPlayer from "./ParentReact/VideoPlayer";
 import AxioHome from "./Jul5Axios/AxioHome";
+import LifeCycle from "./LifeCycle/LifeCycle";
 
 function App() {
   return (
@@ -24,13 +25,16 @@ function App() {
         {/*<Page2/><hr/>*/}
         {/*<ReverseInput/>*/}
         {/*<ReactForm/><hr/>*/}
-        <Home/>
-        <br/><hr/><br/>
+        {/*<Home/>*/}
+        {/*<br/><hr/><br/>*/}
         {/*<Ref/>*/}
         {/*<br/><hr/><br/>*/}
         {/*<Login/>*/}
         {/*<VideoPlayer/>*/}
-        <AxioHome/>
+        Jul 5<AxioHome/>
+        <LifeCycle/>
+        <br/><hr/><br/>
+
     </div>
   );
 }
