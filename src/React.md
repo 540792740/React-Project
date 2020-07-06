@@ -94,4 +94,5 @@ const Person = (prop) => {
 
 ```
 #### LifeCycle:
-    
+    componentWillMount, render, componentDidMount
+    componentWillUpdate, render, componentDidUpdate
