@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.title{
+  height: 44px;
+  text-align: right;
+  background-color: #4b4646;
+  color: #61dafb;
+}
+.title a{
+  padding: 10px 20px;
+  color: cornsilk;
+}

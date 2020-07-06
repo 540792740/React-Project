@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import RouterHome from "./Jul6Router/RouterHome";
 import RouterNews from "./Jul6Router/RouterNews";
 import RouterProduct from "./Jul6Router/RouterProduct";
+import RouterContent from "./Jul6Router/RouterContent";
 
 
 class App extends Component {
@@ -24,6 +25,11 @@ class App extends Component {
         return (
             <Router>
                 <div>
+                    <div className='title'>
+                        <Link to="/">Home</Link>
+                        <Link to="/news">News</Link>
+                        <Link to="/product">Product</Link>
+                    </div>
                     <Switch>
                         <Route exact path="/">
                             <RouterHome />
@@ -33,6 +39,9 @@ class App extends Component {
                         </Route>
                         <Route path="/product">
                             <RouterProduct />
+                        </Route>
+                        <Route path="/content/:aid">
+                            <RouterContent />
                         </Route>
                     </Switch>
                 </div>

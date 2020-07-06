@@ -100,5 +100,10 @@ const Person = (prop) => {
 ```
 #### Router
 ```
-    
+    1. react-router-dom: BrowserRouter as Router, Switch, Route, Link
+    2. Page redirect:
+        a> get 
+        b> Dynamic Router
+            
+        c> LocalStorage
 ```
