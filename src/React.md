@@ -112,3 +112,6 @@ const Person = (prop) => {
 ```
     console.log(url.parse(this.props.location.search, true).query)
 ```
+
+#### Import Image
+    `<img src={require('../assert/images/1.jpg')}/>`
