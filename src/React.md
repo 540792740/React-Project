@@ -107,3 +107,8 @@ const Person = (prop) => {
             
         c> LocalStorage
 ```
+
+#### url API
+```
+    console.log(url.parse(this.props.location.search, true).query)
+```

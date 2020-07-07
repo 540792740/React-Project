@@ -6,6 +6,7 @@ import RouterHome from "./Jul6Router/RouterHome";
 import RouterNews from "./Jul6Router/RouterNews";
 import RouterProduct from "./Jul6Router/RouterProduct";
 import RouterContent from "./Jul6Router/RouterContent";
+import RouterProductContent from "./Jul6Router/RouterProductContent";
 
 
 class App extends Component {
@@ -34,6 +35,7 @@ class App extends Component {
                         <Route exact path="/" component={RouterHome}></Route>
                         <Route path="/news" component={RouterNews}></Route>
                         <Route path="/product" component={RouterProduct}></Route>
+                        <Route path="/productContent" component={RouterProductContent}></Route>
                         <Route path="/content/:aid" component={RouterContent}></Route>
                     </Switch>
                 </div>

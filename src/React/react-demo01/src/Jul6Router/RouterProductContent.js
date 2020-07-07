@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
+import url from 'url';
 
-class RouterContent extends Component {
+class RouterProductContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -10,17 +11,16 @@ class RouterContent extends Component {
 
     // Dynamic Router
     componentDidMount() {
-        console.log(this.props.match.params.aid)
+        console.log(url.parse(this.props.location.search, true).query)
     }
 
     render() {
         return (
             <div>
-                <h3>Content</h3>
-
+                <h3>RouterProductContent</h3>
             </div>
         );
     }
 }
 
-export default RouterContent;
+export default RouterProductContent;
