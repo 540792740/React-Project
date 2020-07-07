@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from "react-router-dom";
 
 class RouterContent extends Component {
     constructor(props) {
@@ -7,6 +6,12 @@ class RouterContent extends Component {
         this.state = {
 
         }
+    }
+
+    // Dynamic Router
+    componentDidMount() {
+        console.log(this.props.match.params.aid)
+        // console.log(this.props)
     }
 
     render() {

@@ -22,7 +22,6 @@ class RouterNews extends Component {
                     {this.state.list.map((value, key)=>{
                         return (
                             <li key={key}>
-                                {/*<Link to="/content/"></Link>*/}
                                 <Link to={`/content/${value.aid}`}>{value.title}</Link>
                             </li>
                         )})}

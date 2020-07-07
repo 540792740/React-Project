@@ -31,18 +31,10 @@ class App extends Component {
                         <Link to="/product">Product</Link>
                     </div>
                     <Switch>
-                        <Route exact path="/">
-                            <RouterHome />
-                        </Route>
-                        <Route path="/news">
-                            <RouterNews />
-                        </Route>
-                        <Route path="/product">
-                            <RouterProduct />
-                        </Route>
-                        <Route path="/content/:aid">
-                            <RouterContent />
-                        </Route>
+                        <Route exact path="/" component={RouterHome}></Route>
+                        <Route path="/news" component={RouterNews}></Route>
+                        <Route path="/product" component={RouterProduct}></Route>
+                        <Route path="/content/:aid" component={RouterContent}></Route>
                     </Switch>
                 </div>
                 <div className="App">
