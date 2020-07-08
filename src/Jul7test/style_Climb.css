@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.background-img{
+    position: fixed;
+    top: 140px;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 74vh;
+    z-index: -1;
+}
+.container1{
+    padding-top: 10px;
+    position: absolute;
+    outline: none;
+    border: none;
+    background: #ffffff;
+    width: 100vw;
+    /*align-items: right;*/
+    text-align: center;
+}
+
+.logo{
+    float: left;
+    margin-left: 21.3125%;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.text-climb{
+    position: fixed;
+    left: 25%;
+    background-color: #ffffff;
+}
+
+.text-climb text:nth-child(1){
+    font-size: 6rem;
+    font-weight:bold;
+    color: #b0b4be;
+    padding-bottom: none;
+}
+
+.text-climb > .text2{
+    font-size: 1.5rem;
+    color: #414f6b;
+    position: absolute;
+    top: 45px;
+    left: 110px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.text-climb > .text3{
+    font-size: 0.7rem;
+    position: fixed;
+    left: 580px;
+    top: 35px;
+    width:30%;
+}
+.header{
+    position: relative;
+    top: 110px;
+    width: 100%;
+    height: 33px;
+    background-color: #414f6b;
+}
+
+.header ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header li {
+    float: left;
+}
+
+.header li a {
+    display: block;
+    padding: 8px;
+    font-size: 1rem;
+    color: #000000;
+    /*font-style: italic;*/
+    text-transform: uppercase;
+    text-decoration: none;
+    /*text-underline: #414f6b;*/
+
+}
+
+.header .nav{
+    padding-left: 320px;
+    font-weight: bold;
+}
+.nav li a{
+    color: #b0b4be;
+
+}
+.nav li a:hover{
+    background-color: #b0b4be;
+    color: #414f6b;
+    text-decoration-line: underline;
+    text-underline: #414f6b;
+}
+
+.schedule{
+    width: 354px;
+    height: 230px;
+    background-color: #f7f8fb;
+    opacity: 0.9;
+    position: fixed;
+    left: 330px;
+    top: 280px;
+}
+
+.schedule .titleSchedule{
+    color: #414f6b;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 43px;
+    padding-top: 23px;
+    font-stretch: semi-condensed;
+}
+.schedule .time{
+    grid-template-columns: repeat(2, 1fr);
+    color: #666768;
+    padding-left: 43px;
+    padding-top: 10px;
+}
+.schedule .time ul{
+    float: left;
+    list-style-type: none;
+}
+.eventBox{
+    margin-left: 30px;
+}
+
+.boxMar :nth-child(1){
+    margin: 10px 0;
+}
+
+.boxMar :nth-child(3){
+    margin: 30px 0;
+}
+.footer{
+    position: fixed;
+    top: 660px;
+}

@@ -6,6 +6,8 @@ import {
     Link
 } from "react-router-dom";
 import Home from "./component/Home";
+import '../src/assert/css/basic.css'
+import '../src/assert/css/index.css'
 import PContent from "./component/Pcontent";
 
 class App extends Component {
