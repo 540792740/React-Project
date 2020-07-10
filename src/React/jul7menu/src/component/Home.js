@@ -1,19 +1,25 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
+
 const axios = require('axios')
 
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            list:[],
+            domain:'http://a.itying.com/'
+        }
     }
     requestData = ()=>{
-        var api = 'http://a.itying.com/api/productlist';
+        var api = this.state.domain + 'api/productlist';
         axios.get(api)
             .then((response)=> {
                 // handle success
                 this.setState({
                     list:response.data.result
                 })
+                console.log(this.state.list)
             })
             .catch(function (error) {
                 // handle error
@@ -29,19 +35,34 @@ class Home extends Component {
         return (
             <div className='home'>
                 <div className="list">
-                    <div className="item">
-                        <h3 className="item_cate">皮蛋瘦肉粥</h3>
-                        <ul className="item_list">
-                            <li>
-                                <div className="inner">
-                                    <img src={require('../assert/images/1.jpg')}/>
-                                        <p className="title">大蒜腊肉</p>
-                                        <p className="price">¥26</p>
-                                </div>
-                            </li>
-                        </ul>
+                    {this.state.list.map((value, key) =>{
+                        return (
+                            <div className="item" key={key}>
+                                <h3 className="item_cate">{value.title}</h3>
+                                <ul className="item_list">
+                                    {value.list.map((v, k) =>{
+                                        return(
+                                            <li key={k}>
+                                                <Link to={`/pContent/${v._id}`}>
+                                                    <div className="inner">
+                                                        <img src={`${this.state.domain}$(v.img_url)`}/>
+                                                        <p className="title">{v.title}</p>
+                                                        <p className="price">${v.price}</p>
+                                                    </div>
+                                                </Link>
 
-                    </div>
+                                            </li>
+                                        )
+                                    })}
+
+
+                                </ul>
+
+                            </div>
+                        )
+                    })}
+
+
                 </div>
             </div>
         );
