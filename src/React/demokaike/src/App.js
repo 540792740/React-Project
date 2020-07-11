@@ -1,12 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import MyComponent from "./React_01Test/LifeCycleComponent";
 
-function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+class App extends Component {
+
+  render() {
+    return (
+        <div>
+
+
+            {/*LifeCycle*/}
+            {/*<MyComponent/>*/}
+        </div>
+    );
+  }
 }
 
 export default App;
