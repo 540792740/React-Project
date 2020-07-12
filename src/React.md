@@ -1,19 +1,19 @@
-#### Component:
+#### 1. Component:
 * First Character of name should be **Capital**
 
-#### 'props' in constructor and super
+#### 2. 'props' in constructor and super
 * used for transform value between the father and child.
 
-#### Image
+#### 3. Image
 *  `import  logo from './image/a.jpg'` <br>
     `<img src={logo}/>`
 
-#### Start:
+#### 4. Start:
 ```
     1. npx create-react-app my-app
 
 ```
-#### Radium:
+#### 5. Radium:
 ```
     1. import Radium, {StyleRoot} from "radium";
     2. Radium(app)
@@ -30,7 +30,7 @@
                     }
 ```
 
-#### prop
+#### 6. prop
 ```
 const Person = (prop) => {
     {prop.children}
@@ -38,18 +38,18 @@ const Person = (prop) => {
     
 ```
 
-#### Redux
+#### 7. Redux
 ```
     npm install redux react-redux -s
 ```
 
-#### Save or Get localhost value
+#### 8. Save or Get localhost value
 ```
     Save:   localStorage.setItem("todoList", straightify(tempList))
     Get:    var list = JSON.parse(localStorage.getItem('todoList'))
 ```
 
-#### Transform between Parent C and Child C
+#### 9. Transform between Parent C and Child C
 ```
      a> <Header run={this.run} 
              title={this.state.title}        
@@ -75,13 +75,13 @@ const Person = (prop) => {
                 Header.propTypes={title: PropTypes.string} 
 ```
 
-#### ref
+#### 10. ref
 ```
     this.userNameRef = React.createRef()
     <input type="text" ref={this.userNameRef} />
 ```
 
-#### React fetch API
+#### 11. React fetch API
 ```
     1. axios
         npm install axios
@@ -93,12 +93,12 @@ const Person = (prop) => {
         
 
 ```
-#### LifeCycle:
+#### 12. LifeCycle:
 ```
     componentWillMount, render, componentDidMount(DOM)
     componentWillUpdate, render, componentDidUpdate
 ```
-#### Router
+#### 13. Router
 ```
     1. react-router-dom: BrowserRouter as Router, Switch, Route, Link
     2. Page redirect:
@@ -108,15 +108,15 @@ const Person = (prop) => {
         c> LocalStorage
 ```
 
-#### url API
+#### 14. url API
 ```
     console.log(url.parse(this.props.location.search, true).query)
 ```
 
-#### Import Image
+#### 15. Import Image
     `<img src={require('../assert/images/1.jpg')}/>`
 
-#### prop-types API
+#### 16. prop-types API
 ```
     1. isRequired: no prop 'text' will warning!
                     none string will also warning but render sucssfully
@@ -129,3 +129,8 @@ const Person = (prop) => {
             static defaultProps = {text:'abc'}
 
 ```
+
+#### 17. app.js has one more child component: map
+    Can avoid null or undefined compared with this.props.children.
+    {React.Children.map(children, (child)=>child)}
+

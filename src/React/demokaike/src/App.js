@@ -14,7 +14,8 @@ class App extends Component {
         let{name, age} = this.state;
         let header = <div>Header</div>;
         let footer = <div>footer</div>;
-
+        let dom = 'Dom1';
+        let dom2 = 123;
       return (
         <div>
             <ChildComponent age={age}
@@ -24,6 +25,8 @@ class App extends Component {
                             text={123}
             >Parent Data
             </ChildComponent>
+            <ChildComponent age={age}>{dom}</ChildComponent>
+            <ChildComponent>{dom2}</ChildComponent>
 
             {/*LifeCycle*/}
             {/*<MyComponent/>*/}

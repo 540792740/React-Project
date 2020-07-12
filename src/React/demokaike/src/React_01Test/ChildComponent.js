@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import PropType from 'prop-types';
 
 class ChildComponent extends Component {
-    static propTypes={
-        text:PropType.number.isRequired
-    }
+    // static propTypes={
+    //     text:PropType.number.isRequired
+    // }
     // static defaultProps = {
     //     text:'abc'
     // }
@@ -16,17 +16,24 @@ class ChildComponent extends Component {
 
     render() {
         let {age, name, header,footer, text} = this.props;
+        // let {children} = this.props
+
         return (
             <div>
                 {text}
                 <div style={{backgroundColor:'red'}}>
                     {header}
                 </div>
-                {age} {name} {this.props.children}
+                {/*{age} {name} {this.props.children}*/}
 
                 <div style={{backgroundColor:'blue'}}>
                     {footer}
                 </div>
+                <h3>Children Map</h3>
+                {/*{React.Children.map(children, (child)=>child)}*/}
+                {/*{React.Children.forEach(children, (child)=>child)}*/}
+                {React.Children.count(this.props.children)}
+                <hr/>
             </div>
         );
     }
