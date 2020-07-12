@@ -7,6 +7,7 @@ class ChildComponent extends Component {
     }
 
     render() {
+
         return (
             <div>
 
