@@ -115,3 +115,17 @@ const Person = (prop) => {
 
 #### Import Image
     `<img src={require('../assert/images/1.jpg')}/>`
+
+#### prop-types API
+```
+    1. isRequired: no prop 'text' will warning!
+                    none string will also warning but render sucssfully
+        
+            static propTypes={
+                text:PropType.string.isRequired
+            }
+        
+        Default:
+            static defaultProps = {text:'abc'}
+
+```
