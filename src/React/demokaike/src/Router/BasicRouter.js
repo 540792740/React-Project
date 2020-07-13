@@ -21,6 +21,8 @@ class BasicRouter extends Component {
             pathname:'/userq/9',
             query:{id:4534}
         }
+        let pathObj =  `/user/${JSON.stringify({id:1, name:'Jacl'})}`
+        
         return (
             <Router>
                 <div>
@@ -51,9 +53,13 @@ class BasicRouter extends Component {
                                 state:{name:'Jack'},
                                 query: {set:'Male'}
                             }}
+                            >Query Link</Link>
+                        </li>
+                        <li>
+                            <NavLink to={pathObj}
                                      activeStyle={{color:'#4dc060'}}
                                      activeClassName={'selected'}
-                            >Query Link</Link>
+                            >User</NavLink>
                         </li>
                     </ul>
 
@@ -65,7 +71,8 @@ class BasicRouter extends Component {
                         <Route exact path="/a/man" component={Home}/>
                         <Route path="/a/woman" component={About}/>
                         <Route path="/user/:id" component={User}/>
-                        <Route path="/pathQuery?id=8" component={User}/>
+                        <Route path="/pathQuery" component={User}/>
+                        <Route path="/pathQuery/:obj" component={User}/>
                     </Switch>
                 </div>
             </Router>
