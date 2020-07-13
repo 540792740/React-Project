@@ -4,7 +4,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    NavLink
+    NavLink,
+    Link
 } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
@@ -16,7 +17,10 @@ class BasicRouter extends Component {
     }
 
     render() {
-        let pathObj = {pathname:'/user/9'}
+        let pathQuery = {
+            pathname:'/userq/9',
+            query:{id:4534}
+        }
         return (
             <Router>
                 <div>
@@ -34,17 +38,22 @@ class BasicRouter extends Component {
                                      activeClassName={'selected'}
                             >Style of Female</NavLink>
                         </li>
-                        {/*<li>*/}
-                        {/*    <NavLink to="/user/5"*/}
-                        {/*             activeStyle={{color:'#4dc060'}}*/}
-                        {/*             activeClassName={'selected'}*/}
-                        {/*    >User</NavLink>*/}
-                        {/*</li>*/}
                         <li>
-                            <NavLink to={pathObj}
+                            <NavLink to="/user/5"
                                      activeStyle={{color:'#4dc060'}}
                                      activeClassName={'selected'}
                             >User</NavLink>
+                        </li>
+                        <li>
+                            <Link to={{
+                                pathname:'/pathQuery',
+                                search:'?id=8',
+                                state:{name:'Jack'},
+                                query: {set:'Male'}
+                            }}
+                                     activeStyle={{color:'#4dc060'}}
+                                     activeClassName={'selected'}
+                            >Query Link</Link>
                         </li>
                     </ul>
 
@@ -56,6 +65,7 @@ class BasicRouter extends Component {
                         <Route exact path="/a/man" component={Home}/>
                         <Route path="/a/woman" component={About}/>
                         <Route path="/user/:id" component={User}/>
+                        <Route path="/pathQuery?id=8" component={User}/>
                     </Switch>
                 </div>
             </Router>
