@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import MyComponent from "./React_01Test/LifeCycleComponent";
 import ChildComponent from "./React_01Test/ChildComponent";
+import BasicRouter from "./Router/BasicRouter";
 
 class App extends Component {
     constructor(props) {
@@ -17,20 +18,23 @@ class App extends Component {
         let dom = 'Dom1';
         let dom2 = 123;
       return (
-        <div>
-            <ChildComponent age={age}
-                            name={name}
-                            header={header}
-                            footer={footer}
-                            text={123}
-            >Parent Data
-            </ChildComponent>
-            <ChildComponent age={age}>{dom}</ChildComponent>
-            <ChildComponent>{dom2}</ChildComponent>
+        <React.Fragment>
+            <BasicRouter/>
+
+            {/*Parent Children transition*/}
+            {/*<ChildComponent age={age}*/}
+            {/*                name={name}*/}
+            {/*                header={header}*/}
+            {/*                footer={footer}*/}
+            {/*                text={123}*/}
+            {/*>Parent Data*/}
+            {/*</ChildComponent>*/}
+            {/*<ChildComponent age={age}>{dom}</ChildComponent>*/}
+            {/*<ChildComponent>{dom2}</ChildComponent>*/}
 
             {/*LifeCycle*/}
             {/*<MyComponent/>*/}
-        </div>
+        </React.Fragment>
     );
   }
 }

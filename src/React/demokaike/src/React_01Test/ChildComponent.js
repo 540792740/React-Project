@@ -19,7 +19,7 @@ class ChildComponent extends Component {
         // let {children} = this.props
 
         return (
-            <div>
+            <React.Fragment>
                 {text}
                 <div style={{backgroundColor:'red'}}>
                     {header}
@@ -34,7 +34,7 @@ class ChildComponent extends Component {
                 {/*{React.Children.forEach(children, (child)=>child)}*/}
                 {React.Children.count(this.props.children)}
                 <hr/>
-            </div>
+            </React.Fragment>
         );
     }
 }

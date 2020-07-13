@@ -106,6 +106,10 @@ const Person = (prop) => {
         b> Dynamic Router
             
         c> LocalStorage
+    3. <Redirect> : deal with 404, at the end of router
+        <NavLink to="/a/man"
+            activeStyle={{color:'#4dc060'}}
+            activeClassName={'selected'} > Style of Male</NavLink>
 ```
 
 #### 14. url API
@@ -116,7 +120,7 @@ const Person = (prop) => {
 #### 15. Import Image
     `<img src={require('../assert/images/1.jpg')}/>`
 
-#### 16. prop-types API
+#### 16. prop-types API. setting type of Props
 ```
     1. isRequired: no prop 'text' will warning!
                     none string will also warning but render sucssfully
