@@ -142,3 +142,10 @@ const Person = (prop) => {
     Can avoid null or undefined compared with this.props.children.
     {React.Children.map(children, (child)=>child)}
 
+####18. History
+```
+    In Child component: 
+        button: goBack(){ this.props.history.goBack(); }
+        button: goForward(){ this.props.history.goForward(); }
+```
+
