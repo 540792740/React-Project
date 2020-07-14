@@ -145,6 +145,7 @@ class App extends Component{
         }
     componentDidMount() {
         this.computedLeftCount();
+        this.renderByHash();
     }
     //Checked all or not
     toggleAllHandler(e){
@@ -171,6 +172,13 @@ class App extends Component{
         let pathname = e.target.hash;
         this.setState({
             filter: pathname
+        })
+    }
+    renderByHash(){
+        this.state.filter = window.location.hash;
+        window.addEventListener('hashchange', ()=>{
+            this.state.filter = window.location.hash;
+            this.setState({})
         })
     }
 

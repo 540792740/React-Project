@@ -149,3 +149,13 @@ const Person = (prop) => {
         button: goForward(){ this.props.history.goForward(); }
 ```
 
+#### window.location:
+```
+    renderByHash(){
+            this.state.filter = window.location.hash;
+            window.addEventListener('hashchange', ()=>{
+                this.state.filter = window.location.hash;
+                this.setState({})
+            })
+        }
+```
