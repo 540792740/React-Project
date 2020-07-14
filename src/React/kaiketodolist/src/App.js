@@ -154,6 +154,17 @@ class App extends Component{
             toggleAll: checked
         })
     }
+    clearCompleted(e){
+        let {todos} = this.state;
+        todos.forEach((todo, index, arr)=>{
+            if(todo.isCompleted){
+                todos.splice(index, 1);
+            }
+        })
+        this.setState({
+            todos:todos
+        })
+    }
 
     render() {
     let {newContent, toggleAll, showClear} = this.state
@@ -203,7 +214,9 @@ class App extends Component{
                 </li>
               </ul>
               {/*Hidden if no completed items are left ↓ */}
-                {showClear && <button className="clear-completed">
+                {showClear && <button className="clear-completed"
+                                      onClick={(e)=>this.clearCompleted(e)}
+                >
                     Clear completed</button>}
             </footer>
           </section>
