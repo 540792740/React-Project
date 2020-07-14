@@ -214,7 +214,7 @@ body {
 }
 
 .todo-list li.completed label {
-	color: #d9d9d9;
+	color: #ea8282;
 	text-decoration: line-through;
 }
 

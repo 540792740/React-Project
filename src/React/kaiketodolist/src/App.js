@@ -1,6 +1,16 @@
 import React, {Component} from 'react';
 import './css/index.css';
 
+
+
+function convertClass(obj){
+    let classStr = '';
+    for(let key in obj){
+        if(obj[key]) classStr += key + ' ';
+    }
+    return classStr;
+}
+
 class App extends Component{
     constructor(props) {
         super(props);
@@ -21,8 +31,11 @@ class App extends Component{
           let {todos, editingId} = this.state;
           return todos.map(todo=>{
               return(
-                  <li key={todo.id} className={editingId == todo.id ? 'editing' : ''
-                   }>
+                  <li key={todo.id}
+                      className={convertClass({
+                          completed:todo.isCompleted,
+                          editing:editingId === todo.id
+                      })}>
                     <div className="view">
                       <input className="toggle"
                              type="checkbox"
@@ -81,7 +94,7 @@ class App extends Component{
           let {todos} = this.state;
           let index = todos.findIndex(t => t.id === todo.id)
           todos.splice(index, 1);
-          this.setState({})
+          this.computedLeftCount();
         }
 
         checkBoxHandler(e, todo){
@@ -111,7 +124,9 @@ class App extends Component{
                 leftNum:num,
             })
         }
-
+    componentDidMount() {
+        this.computedLeftCount();
+    }
 
     render() {
     let {newContent} = this.state
@@ -143,7 +158,7 @@ class App extends Component{
             {/* This footer should hidden by default and shown when there are todos */}
             <footer className="footer">
               {/* This should be `0 items left` by default */}
-              <span className="todo-count"><strong>0</strong> item left</span>
+              <span className="todo-count"><strong>{this.state.leftNum}</strong> item left</span>
               {/* Remove this if you don't implement routing */}
               <ul className="filters">
                 <li>
