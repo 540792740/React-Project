@@ -25,16 +25,32 @@ class App extends Component{
             leftNum:0,
             toggleAll: false,
             showClear: false,
-
+            filter:'#/',
 
         }
         this.todoRef = React.createRef();
   }
       renderList(){
-          let {todos, editingId} = this.state;
-          return todos.map(todo=>{
-              return(
-                  <li key={todo.id}
+            let {todos, editingId, filter} = this.state;
+            switch(filter){
+                case '#/active':
+                    break;
+                case '#/completed':
+                    break;
+                default:
+                    break;
+            }
+            todos.filter(todo =>{
+                if(filter === '#/active'){
+
+                }
+                else if(filter ==='#/completed'){}
+                else{}
+            })
+
+            return todos.map(todo=>{
+                return(
+                    <li key={todo.id}
                       className={convertClass({
                           completed:todo.isCompleted,
                           editing:editingId === todo.id
@@ -166,7 +182,11 @@ class App extends Component{
         }
     }
     filterRender(e){
+        let pathname = e.target.hash;
 
+        this.setState({
+
+        })
     }
 
 
