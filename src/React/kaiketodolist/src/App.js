@@ -24,6 +24,8 @@ class App extends Component{
             editingId: -1,
             leftNum:0,
             toggleAll: false,
+            showClear: false,
+
 
         }
         this.todoRef = React.createRef();
@@ -75,18 +77,21 @@ class App extends Component{
       }
       addTodo(e){
           let maxId = -1;
-          this.state.todos.forEach( todo => {
-            if(todo.id > maxId) maxId = todo.id;
-          })
-          maxId++;
-          this.state.todos.push({
-            id:maxId,
-            isCompleted: false,
-            content: this.state.newContent,
-          })
-        this.setState({
-          newContent : ''
-        })
+          let {newContent} = this.state;
+          if (newContent){
+              this.state.todos.forEach( todo => {
+                  if(todo.id > maxId) maxId = todo.id;
+              })
+              maxId++;
+              this.state.todos.push({
+                  id:maxId,
+                  isCompleted: false,
+                  content: this.state.newContent,
+              })
+              this.setState({
+                  newContent : ''
+              })
+          }
           this.computedLeftCount();
 
       }
@@ -122,11 +127,13 @@ class App extends Component{
             this.state.todos.map(todo =>{
                 if(!todo.isCompleted) {
                     num++;
-                    toggleAllChecked = false
-                }
-                //Function toggleAll changed
-                // one unchecked, icon will turn off
 
+                    //Function toggleAll changed
+                    // one unchecked, icon will turn off
+                    toggleAllChecked = false
+                }else{
+                    this.state.showClear= true
+                }
 
             })
             this.setState({
@@ -149,7 +156,7 @@ class App extends Component{
     }
 
     render() {
-    let {newContent, toggleAll} = this.state
+    let {newContent, toggleAll, showClear} = this.state
     return (
         <React.Fragment>
           <section className="todoapp">
@@ -196,7 +203,8 @@ class App extends Component{
                 </li>
               </ul>
               {/*Hidden if no completed items are left ↓ */}
-              <button className="clear-completed">Clear completed</button>
+                {showClear && <button className="clear-completed">
+                    Clear completed</button>}
             </footer>
           </section>
           <footer className="info">
