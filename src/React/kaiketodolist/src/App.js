@@ -23,6 +23,7 @@ class App extends Component{
           newContent:'',
             editingId: -1,
             leftNum:0,
+            toggleAll: false,
 
         }
         this.todoRef = React.createRef();
@@ -117,19 +118,38 @@ class App extends Component{
         }
         computedLeftCount(){
             let num  = 0;
+            let toggleAllChecked = true;
             this.state.todos.map(todo =>{
-                if(!todo.isCompleted) num++;
+                if(!todo.isCompleted) {
+                    num++;
+                    toggleAllChecked = false
+                }
+                //Function toggleAll changed
+                // one unchecked, icon will turn off
+
+
             })
             this.setState({
                 leftNum:num,
+                toggleAll:toggleAllChecked,
             })
         }
     componentDidMount() {
         this.computedLeftCount();
     }
+    //Checked all or not
+    toggleAllHandler(e){
+        let {checked} = e.target;
+        this.state.todos.forEach(todo=>{
+            todo.isCompleted = checked;
+        })
+        this.setState({
+            toggleAll: checked
+        })
+    }
 
     render() {
-    let {newContent} = this.state
+    let {newContent, toggleAll} = this.state
     return (
         <React.Fragment>
           <section className="todoapp">
@@ -147,7 +167,11 @@ class App extends Component{
             </header>
             {/* This section should be hidden by default and shown when there are todos */}
             <section className="main">
-              <input id="toggle-all" className="toggle-all" type="checkbox"/>
+              <input id="toggle-all"
+                     className="toggle-all"
+                     onChange={(e)=> this.toggleAllHandler(e)}
+                     checked={toggleAll}
+                     type="checkbox"/>
               <label htmlFor="toggle-all">Mark all as complete</label>
               <ul className="todo-list">
                 {/* These are here just to show the structure of the list items */}
