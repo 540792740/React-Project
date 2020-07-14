@@ -2,63 +2,107 @@ import React, {Component} from 'react';
 import './css/index.css';
 
 class App extends Component{
-  constructor(props) {
-    super(props);
-    this.state={
-      todos:[
-        {id:1, isCompleted: true, content:'Eating'},
-        {id:2, isCompleted: false, content:'Sleeping'},
-        {id:3, isCompleted: true, content:'Playing'},
-      ],
-      newContent:'',
+    constructor(props) {
+        super(props);
+        this.state={
+          todos:[
+            {id:1, isCompleted: true, content:'Eating'},
+            {id:2, isCompleted: false, content:'Sleeping'},
+            {id:3, isCompleted: true, content:'Playing'},
+          ],
+          newContent:'',
+            editingId: -1,
 
+        }
+        this.todoRef = React.createRef();
+  }
+      renderList(){
+          let {todos, editingId} = this.state;
+          return todos.map(todo=>{
+              return(
+                  <li key={todo.id} className={editingId == todo.id ? 'editing' : ''
+                   }>
+                    <div className="view">
+                      <input className="toggle"
+                             type="checkbox"
+                             checked={todo.isCompleted}
+                             onChange={e=>this.checkBoxHandler(e, todo)}
+                      />
+                      <label onDoubleClick={() => this.editHandler(todo)}>{todo.content}</label>
+                      <button className="destroy"
+                              onClick={(e)=>this.delTodo(e)}
+                      ></button>
+                    </div>
+                      <form onSubmit={e => this.endEditing(e)}>
+                          <input className="edit"
+                                 value={todo.content}
+                                 ref={this.todoRef}
+                                 onChange={e => this.saveEdit(e, todo)}
+                                 onBlur={(e)=>this.endEditing(e)}
+                          />
+                      </form>
+                  </li>
+              )
+          })
+      }
+
+      valueHandler(e){
+        this.setState({
+          newContent: e.target.value
+        })
+      }
+    saveEdit(e, todo){
+        todo.content = e.target.value;
+        this.setState({})
     }
-  }
-  renderList(){
-      let {todos} = this.state;
-      return todos.map(todo=>{
-          return(
-              <li key={todo.id}>
-                <div className="view">
-                  <input className="toggle"
-                         type="checkbox"
-                         checked={todo.isCompleted}/>
-                  <label>{todo.content}</label>
-                  <button className="destroy"></button>
-                </div>
-                <input className="edit" value="Rule the web"/>
-              </li>
-          )
-      })
-  }
+      formHandler(e){
+            e.preventDefault();
+      }
+      addTodo(e){
+          let maxId = -1;
+          this.state.todos.forEach( todo => {
+            if(todo.id > maxId) maxId = todo.id;
+          })
+          maxId++;
+          this.state.todos.push({
+            id:maxId,
+            isCompleted: false,
+            content: this.state.newContent,
+          })
+        this.setState({
+          newContent : ''
+        })
+          this.setState({})
 
-  valueHandler(e){
-    this.setState({
-      newContent: e.target.value
-    })
-  }
-  formHandler(e){
+      }
 
-  }
-  addTodo(e){
-      let maxId = -1;
-      this.state.todos.forEach( todo => {
-        if(todo.id > maxId) maxId = todo.id;
-      })
-      maxId++;
-      this.state.todos.push({
-        id:maxId,
-        isCompleted: false,
-        content: this.state.newContent,
-      })
-    this.setState({
-      newContent : ''
-    })
+      delTodo(todo){
+          let {todos} = this.state;
+          let index = todos.findIndex(t => t.id === todo.id)
+          todos.splice(index, 1);
+          this.setState({})
+        }
+        checkBoxHandler(e, todo){
+          todo.isCompleted = e.target.checked;
+          this.setState({})
+        }
+        editHandler(todo){
+            this.setState({
+                editingId: todo.id
+            }, ()=>{
+                this.todoRef.current.focus();
+
+            })
+        }
+        endEditing(e){
+            e.preventDefault();
+            this.setState({
+                editingId:-1,
+            });
+        }
 
 
-  }
-
-  render() {
+    render() {
     let {newContent} = this.state
     return (
         <React.Fragment>
