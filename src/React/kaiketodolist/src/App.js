@@ -12,6 +12,7 @@ class App extends Component{
           ],
           newContent:'',
             editingId: -1,
+            leftNum:0,
 
         }
         this.todoRef = React.createRef();
@@ -72,7 +73,7 @@ class App extends Component{
         this.setState({
           newContent : ''
         })
-          this.setState({})
+          this.computedLeftCount();
 
       }
 
@@ -82,23 +83,33 @@ class App extends Component{
           todos.splice(index, 1);
           this.setState({})
         }
+
         checkBoxHandler(e, todo){
-          todo.isCompleted = e.target.checked;
-          this.setState({})
+            todo.isCompleted = e.target.checked;
+            this.computedLeftCount();
         }
         editHandler(todo){
             this.setState({
                 editingId: todo.id
             }, ()=>{
                 this.todoRef.current.focus();
-
             })
+            this.computedLeftCount();
         }
         endEditing(e){
             e.preventDefault();
             this.setState({
                 editingId:-1,
             });
+        }
+        computedLeftCount(){
+            let num  = 0;
+            this.state.todos.map(todo =>{
+                if(!todo.isCompleted) num++;
+            })
+            this.setState({
+                leftNum:num,
+            })
         }
 
 
