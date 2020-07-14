@@ -13,6 +13,10 @@ export default function (state ={}, action) {
                 isLogin: false,
             }
         case userConstants.USER_UPDATE:
-            break;
+            return{
+                ...state,
+                ...action.payload,
+                isLogin: true,
+            }
     }
 }
