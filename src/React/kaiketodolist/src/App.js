@@ -154,16 +154,16 @@ class App extends Component{
             toggleAll: checked
         })
     }
-    clearCompleted(e){
+    clearCompleted(e) {
         let {todos} = this.state;
-        todos.forEach((todo, index, arr)=>{
-            if(todo.isCompleted){
-                todos.splice(index, 1);
+        for (let i = todos.length - 1; i >= 0; i--) {
+            if (todos[i].isCompleted) {
+                todos.splice(i, 1);
             }
-        })
-        this.setState({
-            todos:todos
-        })
+            this.setState({
+                todos: todos
+            });
+        }
     }
 
     render() {
