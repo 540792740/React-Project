@@ -32,23 +32,9 @@ class App extends Component{
   }
       renderList(){
             let {todos, editingId, filter} = this.state;
-            switch(filter){
-                case '#/active':
-                    break;
-                case '#/completed':
-                    break;
-                default:
-                    break;
-            }
-            todos.filter(todo =>{
-                if(filter === '#/active'){
-
-                }
-                else if(filter ==='#/completed'){}
-                else{}
-            })
-
-            return todos.map(todo=>{
+            return todos.map((todo, index) =>{
+                if(filter === '#/active' && todo.isCompleted) return null
+                else if(filter ==='#/completed' && !todo.isCompleted) return null
                 return(
                     <li key={todo.id}
                       className={convertClass({
@@ -76,7 +62,7 @@ class App extends Component{
                       </form>
                   </li>
               )
-          })
+            })
       }
 
       valueHandler(e){
@@ -183,9 +169,8 @@ class App extends Component{
     }
     filterRender(e){
         let pathname = e.target.hash;
-
         this.setState({
-
+            filter: pathname
         })
     }
 
