@@ -165,6 +165,10 @@ class App extends Component{
             });
         }
     }
+    filterRender(e){
+
+    }
+
 
     render() {
     let {newContent, toggleAll, showClear} = this.state
@@ -204,13 +208,20 @@ class App extends Component{
               {/* Remove this if you don't implement routing */}
               <ul className="filters">
                 <li>
-                  <a className="selected" href="#/">All</a>
+                  <a className="selected"
+                     onClick={(e)=>this.filterRender(e)}
+                     href="#/">All</a>
                 </li>
                 <li>
-                  <a href="#/active">Active</a>
+                  <a href="#/active"
+                     onClick={(e)=>this.filterRender(e)}
+
+                  >Active</a>
                 </li>
                 <li>
-                  <a href="#/completed">Completed</a>
+                  <a href="#/completed"
+                     onClick={(e)=>this.filterRender(e)}
+                  >Completed</a>
                 </li>
               </ul>
               {/*Hidden if no completed items are left ↓ */}
