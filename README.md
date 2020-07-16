@@ -21,5 +21,5 @@
 ####7. KaiKeBa Todo List
 [Todo List](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/kaiketodolist)
 
-####8. Shopping Cart
+####8. Shopping Cart with Redux and BootStrap
 [Shopping Cart Demo](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/kaikeredux/src)
