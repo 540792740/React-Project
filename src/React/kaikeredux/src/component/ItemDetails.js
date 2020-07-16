@@ -10,6 +10,7 @@ class ItemDetails extends Component {
     }
 
     render() {
+        const savingPrice = parseInt(this.props.price) - parseInt(this.props.PickupSavings)
         return (
             <div>
                 <Button className='item-details-button'
@@ -33,9 +34,9 @@ class ItemDetails extends Component {
                             <p>Super Car!</p>
                             <Row className='show-grid'>
                                 <Col md={6}>
-                                    <strong>{`$${this.props.price}`}</strong>
+                                    <strong className='price-strike'>{`$${savingPrice}`}</strong>
                                     <br/>
-                                    <strong className='price-strike'>
+                                    <strong >
                                         {`$${this.props.price}`}
                                     </strong>
                                 </Col>
