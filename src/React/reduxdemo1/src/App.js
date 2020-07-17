@@ -6,7 +6,9 @@ import Parent from "./Component/Parent";
 function App() {
   return (
     <div className="App">
-      <Parent/>
+      <header className="App-header">
+          <Parent/>
+      </header>
     </div>
   );
 }
