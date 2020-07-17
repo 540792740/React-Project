@@ -11,7 +11,6 @@
 #### 4. Start:
 ```
     1. npx create-react-app my-app
-
 ```
 #### 5. Radium:
 ```
@@ -35,7 +34,6 @@
 const Person = (prop) => {
     {prop.children}
 }
-    
 ```
 
 #### 7. Redux
@@ -90,26 +88,18 @@ const Person = (prop) => {
     2. fetch-jsonp
         npm install fetch-jsonp
         import FetchJsonp from 'fetch-jsonp'
-        
+```
 
-```
-#### 12. LifeCycle:
-```
-    componentWillMount, render, componentDidMount(DOM)
-    componentWillUpdate, render, componentDidUpdate
-```
 #### 13. Router
 ```
     1. react-router-dom: BrowserRouter as Router, Switch, Route, Link
     2. Page redirect:
         a> get 
         b> Dynamic Router
-            
         c> LocalStorage
     3.  NavLink and Link:
             NavLink: Cna be render with activeClassName, activeStyle, exact, isActive
             Link: jump to another page
-
     4. <Redirect> : deal with 404, at the end of router
         <NavLink to="/a/man"
             activeStyle={{color:'#4dc060'}}
@@ -156,6 +146,6 @@ const Person = (prop) => {
             window.addEventListener('hashchange', ()=>{
                 this.state.filter = window.location.hash;
                 this.setState({})
-            })
+            }) 
         }
 ```
