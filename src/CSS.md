@@ -1,11 +1,16 @@
 1. add under line: 
-    * border-bottom:2px solid #d9d9d9;
+    * border-bottom:2px solid #d9d9d9; 
     * text-decoration: underline;
 
 2. Mouse Hover icon change:
     * cursor: pointer;
 
-3. Border None: `outline: none; border: none; background: none;`
+3. Border None: 
+```
+    outline: none; 
+    border: none; 
+    background: none;
+```
 
 4. background change when hover:    <br>
 ```
@@ -25,15 +30,10 @@
      `100vh: view height`
     
 
-7. **box-sizing: border-box;** padding or margin cannot change the size of height and width of the box
-``` 
-    width: 300px;
-    height: 100px;  
-    padding: 50px;
-    border: 1px solid red;
-    box-sizing: border-box;
-```
-
+7. Box model:
+    * box-sizing: border-box
+    * box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+    
 8.css selector: *{} => select all element <br>
 
 9. overflow:
