@@ -7,7 +7,7 @@ const api = {
 
 function App() {
   return (
-      <div className="app">
+      <div className="app warm">
         <main>
             <div className='search-box'>
               <input type="text"

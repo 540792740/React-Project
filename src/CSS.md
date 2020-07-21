@@ -82,4 +82,13 @@
         transform: rotate(20deg);
         transform: skewY(20deg);
 ```
+16. Background:
+```
+    background-size: cover  -> resize to cover whole page
 
+```
+
+17. margin/padding:
+`4 property: margin: top right bottom left`
+`3 property: margin: top right&left bottom`
+`2 property: margin: top&bottom right&left`
