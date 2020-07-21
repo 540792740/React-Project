@@ -25,10 +25,15 @@ function App() {
                      placeholder='Search...'
               />
             </div>
+
             <div className='location-box'>
                 <div className='location'>New York, US</div>
                 <div className='date'>{dataBuilder(new Date())}</div>
+            </div>
 
+            <div className='weather-box'>
+                <div className='temp'> 15&deg;C</div>
+                <div className='weather'>Sunny</div>
             </div>
         </main>
       </div>
