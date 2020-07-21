@@ -43,9 +43,14 @@
     scroll: scroll data
 ```
 
-10. Background:
+10. Font:
 ```
-
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 ```
 
 11. container:  <br>
