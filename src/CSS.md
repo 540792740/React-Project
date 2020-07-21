@@ -1,15 +1,21 @@
+1. add under line: 
+    * border-bottom:2px solid #d9d9d9;
+    * text-decoration: underline;
 
-1. add underline: `border-bottom:2px solid #d9d9d9;` <br>
-
-2. Mouse Hover icon change:`cursor: pointer;`<br>
+2. Mouse Hover icon change:
+    * cursor: pointer;
 
 3. Border None: `outline: none; border: none; background: none;`
 
 4. background change when hover:    <br>
-    `background-image: linear-gradient(to right, #57bd3c, #38d39f, #32be8f);`     <br>
-    `background-size: 200%;` <br>
-   ` transition: .5s;` <br>
-    `.btn:hover{background-position: right}`
+```
+    z-index: -1; => Set as Background 
+    Background img should position:fixed;  <br>
+    
+    background-size: cover  -> resize to cover whole page
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.75));
+    .btn:hover{background-position: right}
+```
 
 5. UpperCase Text   <br>
     `text-transform: uppercase;`
@@ -39,8 +45,6 @@
 
 10. Background:
 ```
-    z-index: -1; => Set as Background 
-    Background img should position:fixed;  <br>
 
 ```
 
@@ -82,10 +86,9 @@
         transform: rotate(20deg);
         transform: skewY(20deg);
 ```
-16. Background:
+16. 
 ```
-    background-size: cover  -> resize to cover whole page
-
+      
 ```
 
 17. margin/padding:
