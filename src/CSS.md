@@ -68,3 +68,5 @@
     grid-gap: 50px;
     padding: 10px;
 ```
+
+14. * selector: select all element
