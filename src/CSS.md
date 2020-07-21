@@ -70,3 +70,16 @@
 ```
 
 14. * selector: select all element
+
+15. transition/ transform:
+```
+    transition:
+        transition: width 2s, height 4s
+        transition-delay: 1s
+        transition-duration: 1s
+        transition-timing-function: linear/ease/ease-in/ease out
+    transform: 
+        transform: rotate(20deg);
+        transform: skewY(20deg);
+```
+
