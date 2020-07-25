@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
-import {connect } from 'react-redux'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchPosts } from "../actions/psotActions";
 
 class Posts extends Component {
     render() {
@@ -18,4 +19,4 @@ class Posts extends Component {
     }
 }
 
-export default Posts;
+export default connect(null, { fetchPosts }) (Posts);
