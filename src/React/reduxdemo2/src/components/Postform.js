@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import { createPosts } from "../actions/psotActions";
+
 
 class PostForm extends Component {
     constructor(props) {
@@ -20,6 +24,7 @@ class PostForm extends Component {
             title:this.state.title,
             body: this.state.body,
         }
+        this.props.createPosts(post)
     }
 
     render() {
@@ -48,5 +53,8 @@ class PostForm extends Component {
         );
     }
 }
+PostForm.Prototype = {
+    createPosts: PropTypes.func.isRequired
+}
 
-export default PostForm;
+export default connect(null, {createPosts})(PostForm);
