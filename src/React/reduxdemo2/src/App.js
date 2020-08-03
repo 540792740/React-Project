@@ -4,15 +4,21 @@ import Posts from "./components/Posts";
 import PostForm from "./components/Postform";
 import {Provider} from 'react-redux';
 import store from './store'
+import UseEffectTest from "./components/UseEffectTest";
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            flag : true
+        }
     }
+
     render() {
         return (
             <Provider store={store}>
+                <UseEffectTest/>
+                <hr/>
                 <div className='App'>
                     <PostForm/>
                     <hr/>
