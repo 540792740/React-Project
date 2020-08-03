@@ -1,6 +1,7 @@
 import React, {useEffect, useRef,  useState} from 'react';
 import { useForm } from "./useForm";
 import {Hello} from "./Hello";
+import {useFetch} from "./useFetch";
 
 // substitute componentDidMount and componentDidUpdated
 
@@ -20,15 +21,21 @@ const UseEffectTest = () => {
     //         window.removeEventListener('mousemove', onMouseMove);
     //     }
     // }, [])
-    useEffect(()=>{
-        console.log('mount1')
-    },[])
-    useEffect(()=>{
-        console.log('mount2')
-    },[])
+    // useEffect(()=>{
+    //     console.log('mount1')
+    // },[])
+    // useEffect(()=>{
+    //     console.log('mount2')
+    // },[])
+
+    const [count, setCount] = useState(0)
+    const {data, loading} = useFetch(`http://numbersapi.com/${count}/trivia`)
 
     return(
         <div>
+            <div>{!data ? 'loading..'  : data}</div>
+            <div>Count: {count}</div>
+            <button onClick={()=> setCount(c => c + 1)}> + </button>
             {/*<button onClick={()=>setShow(!showHello)}>Toggle</button>*/}
             {/*{showHello && <Hello/>}*/}
             <br/>
