@@ -5,6 +5,7 @@ import PostForm from "./components/Postform";
 import {Provider} from 'react-redux';
 import store from './store'
 import UseEffectTest from "./components/UseEffectTest";
+import NEw from "./test/NEw";
 
 class App extends Component {
     constructor(props) {
@@ -17,13 +18,14 @@ class App extends Component {
     render() {
         return (
             <Provider store={store}>
-                <UseEffectTest/>
-                <hr/>
-                <div className='App'>
-                    <PostForm/>
-                    <hr/>
-                    <Posts/>
-                </div>
+                <NEw/>
+                {/*<UseEffectTest/>*/}
+                {/*<hr/>*/}
+                {/*<div className='App'>*/}
+                {/*    <PostForm/>*/}
+                {/*    <hr/>*/}
+                {/*    <Posts/>*/}
+                {/*</div>*/}
             </Provider>
 
         );

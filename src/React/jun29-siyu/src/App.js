@@ -2,19 +2,20 @@ import React, {Component} from 'react';
 import './App.css';
 import {connect} from "react-redux"
 import {createAdd, createSub} from "./actions/index"
+import Button from "./Component/Button";
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            fullName:`${props.firstName} ${props.lastName}`
-        }
+        this.state = {}
+    }
+    onClick(){
+        console.log('test log')
     }
     render() {
-        var fullName = this.state.fullName
         return (
             <div>
-                {fullName}
+                <Button text={'Text'} onClick={()=>this.onClick()}></Button>
             </div>
         );
     }
@@ -22,10 +23,29 @@ class App extends Component {
 
 export default App;
 
-
-
-
-
+// class App extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state={
+//             fullName:`${props.firstName} ${props.lastName}`
+//         }
+//     }
+//     render() {
+//         var fullName = this.state.fullName
+//         return (
+//             <div>
+//                 {fullName}
+//             </div>
+//         );
+//     }
+// }
+//
+// export default App;
+//
+//
+//
+//
+//
 
 // const App = (props) =>{
 //     console.log(props)
