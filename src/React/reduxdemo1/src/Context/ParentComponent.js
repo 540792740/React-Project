@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Child from "./Child";
 
 export const {Provider, Consumer} = React.createContext('contextName');
+
 class ParentComponent extends Component {
     render() {
         let name = 'Little'
@@ -9,7 +10,7 @@ class ParentComponent extends Component {
           <Provider value={name}>
               <div>
                   <p>Parent Value: {name}</p>
-                  <Child/>
+                  <Child />
               </div>
           </Provider>
         );

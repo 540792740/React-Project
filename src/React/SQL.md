@@ -101,3 +101,6 @@ insert into emps
         parent_id int(8)，
         FOREIGN KEY parent_id REFERENCE t_dept(id),  -->约束id，所有值都要在parent_id里面
     )
+    
+select `SUBSCRIBER_ID`, ``, ``, `` from SUBSCRIBER
+left join `SUBSCIBER` using (`SUBSCRIBER_ID`)
