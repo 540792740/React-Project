@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>divPosition</title>
+    <style>
+        :root{
+            --mouse-x:200;
+            --mouse-y:200;
+        }
+        div:after{
+            counter-reset: mouse-x var(--mouse-x) mouse-y var(--mouse-y);
+            content: counter(mouse-x) "px, " counter(mouse-y) "px";
+        }
+    </style>
+</head>
+<body>
+
+    <div></div>
+    <script>
+        document.addEventListener('mousemove',(e)=>{
+            document.documentElement.style.setProperty("--mouse-x", e.clientX)
+            document.documentElement.style.setProperty("--mouse-y", e.clientY)
+        })
+    </script>
+</body>
+</html>
