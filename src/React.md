@@ -90,12 +90,12 @@ const Person = (prop) => {
         import FetchJsonp from 'fetch-jsonp'
 ```
 
-#### 13. Router
+#### 13. RouterHome
 ```
-    1. react-router-dom: BrowserRouter as Router, Switch, Route, Link
+    1. react-router-dom: BrowserRouter as RouterHome, Switch, Route, Link
     2. Page redirect:
         a> get 
-        b> Dynamic Router
+        b> Dynamic RouterHome
         c> LocalStorage
     3.  NavLink and Link:
             NavLink: Cna be render with activeClassName, activeStyle, exact, isActive

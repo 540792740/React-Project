@@ -8,7 +8,7 @@ class RouterContent extends Component {
         }
     }
 
-    // Dynamic Router
+    // Dynamic RouterHome
     componentDidMount() {
         console.log(this.props.match.params.aid)
     }

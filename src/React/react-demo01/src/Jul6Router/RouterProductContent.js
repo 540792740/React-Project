@@ -9,7 +9,7 @@ class RouterProductContent extends Component {
         }
     }
 
-    // Dynamic Router
+    // Dynamic RouterHome
     componentDidMount() {
         console.log(url.parse(this.props.location.search, true).query)
     }
