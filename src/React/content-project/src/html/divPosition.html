@@ -4,23 +4,18 @@
     <meta charset="UTF-8">
     <title>divPosition</title>
     <style>
-        :root{
-            --mouse-x:200;
-            --mouse-y:200;
-        }
-        div:after{
-            counter-reset: mouse-x var(--mouse-x) mouse-y var(--mouse-y);
-            content: counter(mouse-x) "px, " counter(mouse-y) "px";
-        }
     </style>
 </head>
 <body>
+    <p>Move your mouse</p>
+    <p id="screen-log"></p>
 
-    <div></div>
     <script>
-        document.addEventListener('mousemove',(e)=>{
-            document.documentElement.style.setProperty("--mouse-x", e.clientX)
-            document.documentElement.style.setProperty("--mouse-y", e.clientY)
+        let screenLog = document.querySelector('#screen-log');
+        document.addEventListener('mousemove', (e)=>{
+            screenLog.innerHTML =
+                ` Screen X/Y: ${e.screenX}, ${e.screenY} <br/>
+                  clientX X/Y: ${e.clientX}, ${e.clientY}`;
         })
     </script>
 </body>
