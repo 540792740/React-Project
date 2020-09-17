@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  float: left;
 }
 
 
@@ -8,18 +9,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 
 :root{
   background-color: #3b3636;
@@ -45,4 +34,11 @@ a{
 }
 a:visited{
   color: white;
+}
+.dropDownCss{
+  /*position: absolute;*/
+}
+.form{
+  background-color: cornflowerblue;
+  min-width: 100vw;
 }
