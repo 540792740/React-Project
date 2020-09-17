@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>divPosition</title>
+    <style>
+        .dropBtn{
+            background-image: linear-gradient(to right, #32ec86, #9df1c3, #00f178);
+            background-size: 200%;
+            transition: 0.5s;
+            color: #ffffff;
+            font-size: 1rem;
+            border: none;
+            cursor:pointer;
+            padding: 10px;
+            min-width: 160px;
+            border: none;
+            outline: none;
+        }
+        .dropDown{
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropDown-Content{
+            display: none;
+            position: absolute;
+            background-color: rgba(171, 255, 190, 0.4);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px #555151;
+        }
+        .dropDown-Content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        .dropDown:hover .dropBtn{
+            background-position: right;
+        }
+        .dropDown:hover .dropDown-Content{
+            display: block;
+            transition: 0.5s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dropDown">
+        <button class="dropBtn">Menu</button>
+        <div class="dropDown-Content">
+            <a href="#">Menu 1</a>
+            <a href="#">Menu 2</a>
+            <a href="#">Menu 3</a>
+        </div>
+    </div>
+    <script>
+    </script>
+
+</body>
+</html>
