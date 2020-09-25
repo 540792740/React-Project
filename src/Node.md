@@ -58,6 +58,12 @@ run server in terminal: `supervisor app.js`
     12. var readerStream = fs.createReadStream('../html/input.txt');
         var writerStream = fs.createWriteStream('../html/output_pip.txt');
         readerStream.(writerStream)
+    13. fs.writeFile('./mock_copy.json',mockData,'utf8',function(err){
+            if(err)
+                console.log('写文件出错了，错误是：'+err);
+            else
+                console.log('ok');
+        })
 ```
 
 ####7. web server

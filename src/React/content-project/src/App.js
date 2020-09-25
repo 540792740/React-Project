@@ -3,6 +3,7 @@ import React from 'react';
 import RouterHome from "./Component/RouterHome";
 import DropDown from "./Component/DropDown";
 import RouterApp from "./loginAuth/RouterApp";
+import JwtApp from "./JWT/jwtApp";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           {/*<div className="dropDownCss"><DropDown/></div>*/}
           {/*<DropDown/>*/}
           <RouterApp/>
+          <JwtApp/>
       </div>
   );
 }
