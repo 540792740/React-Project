@@ -14,6 +14,11 @@ const App = (props) =>{
         )
 }
 const mapStateToProps = (state) =>{
+    let i = 0
+    while(i < 10){
+        console.log('new item:', i)
+        i++;
+    }
     return {value: state}
 }
 
