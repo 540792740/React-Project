@@ -55,9 +55,9 @@ class App extends Component {
                     {/*<Login/>*/}
                     {/*<VideoPlayer/>*/}
                     {/*Jul 5<AxioHome/>*/}
-                    {this.state.flag?<LifeCycle title={this.state.title}/>:''}
-                    <button onClick={()=>this.setFlag()}>Unmount</button>
-                    <br/><hr/><br/>
+                    {/*{this.state.flag?<LifeCycle title={this.state.title}/>:''}*/}
+                    {/*<button onClick={()=>this.setFlag()}>Unmount</button>*/}
+                    {/*<br/><hr/><br/>*/}
                 </div>
             </Router>
 
