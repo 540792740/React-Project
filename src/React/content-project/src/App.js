@@ -4,6 +4,7 @@ import RouterHome from "./Component/RouterHome";
 import DropDown from "./Component/DropDown";
 import RouterApp from "./loginAuth/RouterApp";
 import JwtApp from "./JWT/jwtApp";
+import PostHttPform from "./HttpPost/PostHTTPform";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
           {/*<div className="dropDownCss"><DropDown/></div>*/}
           {/*<DropDown/>*/}
           <RouterApp/>
-          <JwtApp/>
+          <JwtApp/><hr/>
+          <PostHttPform/>
       </div>
   );
 }
