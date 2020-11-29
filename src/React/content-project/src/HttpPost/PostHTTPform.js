@@ -35,7 +35,7 @@ class PostHttPform extends Component {
                                 value={body}
                                 onChange={(e)=>this.changeHandler(e)}
                     /></div>
-                    <button ></button>
+                    <button >Click</button>
                 </form>
             </div>
         );
