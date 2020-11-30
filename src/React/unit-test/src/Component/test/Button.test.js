@@ -3,8 +3,9 @@ import ReactDom from 'react-dom';
 import Button from "../Button";
 
 import {cleanup, render} from "@testing-library/react";
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
 
+import TestRenderer from 'react-test-renderer';
 
 // afterEach(cleanup)
 it('renders without crashing', ()=>{
@@ -20,4 +21,9 @@ it('renders button correctly', ()=>{
 it('renders button correctly', ()=>{
     const {getByTestId} = render(<Button label="save"></Button>)
     expect(getByTestId('button')).toHaveTextContent("save")
+})
+
+it('matches snapshot 1', ()=>{
+    const tree = TestRenderer.create(<Button label='save'></Button>);
+     expect(tree).toMatchSnapshot();
 })
