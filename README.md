@@ -4,7 +4,7 @@
 * [TodoList1](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/todo-list-jun26) 
 * [TodoList2](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/todo-list-practive)
 * [Todo MVC](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/kaiketodolist)
-* [Todo Jiuzhang](https://github.com/540792740/JiuzhangReact/tree/main/todo-jiuzhang)   
+* [Todo Jiuzhang](https://github.com/540792740/JiuzhangReact/blob/main/todo-jiuzhang/src/App.js)   
 
 ####2. LoginForm1
 [RouterHome Module](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/react-demo01/src)
