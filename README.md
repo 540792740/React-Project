@@ -7,17 +7,15 @@
 * [Todo Jiuzhang](https://github.com/540792740/JiuzhangReact/blob/main/todo-jiuzhang/src/App.js)   
 
 ####2. LoginForm1
-[RouterHome Module](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/react-demo01/src)
+[Router Home Module](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/react-demo01/src)
+[Login and Registration Page](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/my-app)
 
 ####3. CSS
 * [Center](https://github.com/540792740/React-Project/blob/master/src/CSSHTML/%E5%B1%85%E4%B8%AD.html)
 * [Mouse Capture](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/content-project/src/html)
 
-####4. Login and Registration Page
-[Login Page](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/my-app)
-
-####5. Redux By Siyu
-[Redux demo](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/jun29-siyu)
+####4. Redux
+[Redux demo Easy](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/jun29-siyu)
 
 ####6. KaiKeBa 
 [Kaike Demo]()
