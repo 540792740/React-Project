@@ -14,9 +14,6 @@
 * [Center](https://github.com/540792740/React-Project/blob/master/src/CSSHTML/%E5%B1%85%E4%B8%AD.html)
 * [Mouse Capture](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/content-project/src/html)
 
-#### 4. Redux
-[Redux demo Easy](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/jun29-siyu)
-
 #### 5. [Personal Management Center](https://github.com/540792740/JiuzhangReact/tree/main/personal-app)
 
 #### 8. [Shopping Cart with Redux and BootStrap](https://github.com/540792740/2020InterviewPerpare/tree/master/src/React/kaikeredux/src)
